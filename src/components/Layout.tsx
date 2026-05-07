@@ -121,6 +121,18 @@ export default function Layout() {
       </main>
 
       <footer className="border-t border-forest-800 bg-forest-900 text-gray-300">
+        <div className="bg-forest-800/40">
+          <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3 text-xs text-forest-100/80 sm:px-6 lg:px-8">
+            <span className="flex items-center gap-3">
+              <span><span className="font-semibold text-white">RTO:</span> <span className="text-tan-300">registration in progress</span></span>
+              <span className="hidden text-forest-100/40 sm:inline">·</span>
+              <span><span className="font-semibold text-white">CRICOS:</span> <span className="text-tan-300">coming soon</span></span>
+              <span className="hidden text-forest-100/40 sm:inline">·</span>
+              <span><span className="font-semibold text-white">ABN:</span> <span className="text-tan-300">to be added</span></span>
+            </span>
+            <span className="text-forest-100/60">A South Australian Registered Training Organisation</span>
+          </div>
+        </div>
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
           <div>
             <div className="mb-4 flex items-center gap-3">
@@ -131,14 +143,14 @@ export default function Layout() {
               A Registered Training Organisation delivering nationally recognised
               qualifications in health, aged care, disability and community services.
             </p>
-            <div className="mt-4 flex gap-3 text-xs font-semibold">
-              <a href="#" aria-label="Facebook" className="flex h-8 w-8 items-center justify-center rounded-full bg-forest-800 text-gray-300 hover:bg-tan-300 hover:text-forest-900">
+            <div className="mt-5 flex gap-2.5 text-sm font-bold">
+              <a href="#" aria-label="Facebook" className="flex h-9 w-9 items-center justify-center rounded-full bg-tan-300 text-forest-900 transition hover:bg-tan-200 hover:scale-105">
                 f
               </a>
-              <a href="#" aria-label="Instagram" className="flex h-8 w-8 items-center justify-center rounded-full bg-forest-800 text-gray-300 hover:bg-tan-300 hover:text-forest-900">
+              <a href="#" aria-label="Instagram" className="flex h-9 w-9 items-center justify-center rounded-full bg-tan-300 text-forest-900 transition hover:bg-tan-200 hover:scale-105">
                 ig
               </a>
-              <a href="#" aria-label="LinkedIn" className="flex h-8 w-8 items-center justify-center rounded-full bg-forest-800 text-gray-300 hover:bg-tan-300 hover:text-forest-900">
+              <a href="#" aria-label="LinkedIn" className="flex h-9 w-9 items-center justify-center rounded-full bg-tan-300 text-forest-900 transition hover:bg-tan-200 hover:scale-105">
                 in
               </a>
             </div>
@@ -179,12 +191,20 @@ export default function Layout() {
               </li>
               <li className="flex items-start gap-2">
                 <Phone size={16} className="mt-0.5 flex-shrink-0 text-tan-300" />
-                <a href="tel:+61466331055" className="hover:text-white">+61 466 331 055</a>
+                <a
+                  href="tel:+61466331055"
+                  className="font-medium text-white underline-offset-2 hover:underline"
+                >
+                  +61 466 331 055
+                </a>
               </li>
               <li className="flex items-start gap-2">
                 <Mail size={16} className="mt-0.5 flex-shrink-0 text-tan-300" />
-                <a href="mailto:info@holainternationalcollege.com.au" className="hover:text-white break-all">
-                  info@holainternationalcollege.com.au
+                <a
+                  href="mailto:info@holainternationalcollege.com.au"
+                  className="text-sm leading-relaxed hover:text-white"
+                >
+                  info@holainternational<wbr />college.com.au
                 </a>
               </li>
             </ul>

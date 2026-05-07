@@ -56,7 +56,7 @@ const categories: { name: string; color: string; courses: Course[] }[] = [
         duration: "1 day",
         mode: "Face-to-face",
         description:
-          "Nationally recognized certification covering CPR and the provision of first aid in workplace and community settings.",
+          "Nationally recognised certification covering CPR and the provision of first aid in workplace and community settings.",
       },
     ],
   },
@@ -80,7 +80,7 @@ const categories: { name: string; color: string; courses: Course[] }[] = [
 export default function Courses() {
   usePageMeta(
     "Courses — Hola International College",
-    "Nationally recognized CHC33021, CHC52021, HLTAID011 and medication training. Full-time, part-time and face-to-face study options."
+    "Nationally recognised CHC33021, CHC52021, HLTAID011 and medication training. Full-time, part-time and face-to-face study options."
   );
   return (
     <>
@@ -88,7 +88,7 @@ export default function Courses() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Our Courses</h1>
           <p className="mt-4 max-w-2xl text-lg text-forest-100">
-            Nationally recognized qualifications and skill sets in health, aged care,
+            Nationally recognised qualifications and skill sets in health, aged care,
             disability and community services.
           </p>
         </div>

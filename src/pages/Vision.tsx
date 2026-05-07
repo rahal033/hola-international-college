@@ -45,7 +45,7 @@ export default function Vision() {
           <div className="rounded-2xl bg-forest-700 p-8 text-white shadow-lg sm:p-10">
             <h2 className="text-2xl font-bold sm:text-3xl">Our Vision</h2>
             <p className="mt-4 text-base leading-relaxed text-forest-50 sm:text-lg">
-              To be the leading RTO recognized for excellence in health, aged care, and
+              To be the leading RTO recognised for excellence in health, aged care, and
               community services education — empowering a new generation of compassionate,
               confident professionals who transform lives in their communities.
             </p>

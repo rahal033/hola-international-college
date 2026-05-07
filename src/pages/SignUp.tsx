@@ -36,7 +36,7 @@ const intakes = (() => {
 export default function SignUp() {
   usePageMeta(
     "Apply Now — Hola International College",
-    "Apply online for nationally recognized qualifications in health, aged care, disability and community services. Monthly intakes."
+    "Apply online for nationally recognised qualifications in health, aged care, disability and community services. Monthly intakes."
   );
   const [submitting, setSubmitting] = useState(false);
 

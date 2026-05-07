@@ -70,8 +70,8 @@ const categories: FaqCategory[] = [
     name: "Recognition & Pathways",
     items: [
       {
-        q: "Are your qualifications nationally recognized?",
-        a: "Yes. All our qualifications are accredited under the Australian Qualifications Framework (AQF) and recognized by employers Australia-wide.",
+        q: "Are your qualifications nationally recognised?",
+        a: "Yes. All our qualifications are accredited under the Australian Qualifications Framework (AQF) and recognised by employers Australia-wide.",
       },
       {
         q: "Can I get Recognition of Prior Learning (RPL)?",
