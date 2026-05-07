@@ -131,7 +131,7 @@ export default function Careers() {
                     <p className="mt-3 text-sm leading-relaxed text-gray-600">{j.description}</p>
                   </div>
                   <a
-                    href="mailto:careers@holainternational.edu.au"
+                    href="mailto:careers@holainternationalcollege.com.au"
                     className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 hover:shadow-md"
                   >
                     Apply Now <ArrowRight size={16} />
@@ -151,10 +151,10 @@ export default function Careers() {
             and we'll be in touch when a suitable role opens up.
           </p>
           <a
-            href="mailto:careers@holainternational.edu.au"
+            href="mailto:careers@holainternationalcollege.com.au"
             className="mt-6 inline-flex rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 shadow-md transition hover:bg-blue-50"
           >
-            careers@holainternational.edu.au
+            careers@holainternationalcollege.com.au
           </a>
         </div>
       </section>

@@ -104,8 +104,8 @@ export default function Contact() {
               <a href="tel:+61123456789" className="hover:text-blue-700">+61 1 2345 6789</a>
             </InfoCard>
             <InfoCard icon={Mail} title="Email Us">
-              <a href="mailto:info@holainternational.edu.au" className="break-all hover:text-blue-700">
-                info@holainternational.edu.au
+              <a href="mailto:info@holainternationalcollege.com.au" className="break-all hover:text-blue-700">
+                info@holainternationalcollege.com.au
               </a>
             </InfoCard>
             <InfoCard icon={Clock} title="Office Hours">
@@ -122,10 +122,10 @@ export default function Contact() {
                 through visa, CRICOS and pre-arrival support.
               </p>
               <a
-                href="mailto:international@holainternational.edu.au"
+                href="mailto:international@holainternationalcollege.com.au"
                 className="mt-3 inline-block text-sm font-semibold text-blue-700 hover:text-blue-900"
               >
-                international@holainternational.edu.au →
+                international@holainternationalcollege.com.au →
               </a>
             </div>
           </div>

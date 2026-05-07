@@ -186,8 +186,8 @@ export default function Layout() {
               </li>
               <li className="flex items-start gap-2">
                 <Mail size={16} className="mt-0.5 flex-shrink-0 text-blue-400" />
-                <a href="mailto:info@holainternational.edu.au" className="hover:text-white break-all">
-                  info@holainternational.edu.au
+                <a href="mailto:info@holainternationalcollege.com.au" className="hover:text-white break-all">
+                  info@holainternationalcollege.com.au
                 </a>
               </li>
             </ul>
