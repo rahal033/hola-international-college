@@ -1,5 +1,6 @@
 import { Heart, TrendingUp, Users, Coffee, MapPin, ArrowRight } from "lucide-react";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useStructuredData, buildBreadcrumb } from "../hooks/useStructuredData";
 
 const benefits = [
   {
@@ -64,9 +65,17 @@ const jobs = [
 
 export default function Careers() {
   usePageMeta(
-    "Careers — Hola International College",
-    "Join Hola International College. Open roles for trainers, assessors, student support and admissions in Adelaide SA."
+    "Careers — Trainer, Assessor & Support Roles | Hola International College Adelaide",
+    "Work with Hola International College in Elizabeth South, Adelaide. Open roles for aged care trainers, disability support trainers, first aid instructors, student support and admissions coordinators."
   );
+
+  useStructuredData(
+    buildBreadcrumb([
+      ["Home", "/"],
+      ["Careers", "/careers"],
+    ])
+  );
+
   return (
     <>
       <section className="bg-gradient-to-br from-forest-700 to-forest-900 py-16 text-white sm:py-20">

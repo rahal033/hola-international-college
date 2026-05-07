@@ -10,6 +10,7 @@ import {
   MessageCircle,
 } from "lucide-react";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useStructuredData, buildBreadcrumb } from "../hooks/useStructuredData";
 
 const stats = [
   { value: "5", label: "Nationally Recognised Courses" },
@@ -74,6 +75,9 @@ export default function Home() {
     "Hola International College — Aged Care, Disability & Community Services Training in Adelaide",
     "Hola International College in Elizabeth South, Adelaide delivers nationally recognised CHC qualifications in aged care (CHC33021), disability support, community services (CHC52021) and first aid (HLTAID011). Monthly intakes, real placements across South Australia."
   );
+
+  useStructuredData(buildBreadcrumb([["Home", "/"]]));
+
   return (
     <>
       <section className="relative overflow-hidden bg-gradient-to-br from-forest-700 via-forest-800 to-forest-900 text-white">

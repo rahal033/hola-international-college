@@ -1,5 +1,6 @@
 import { Award, Shield, Lightbulb, Heart } from "lucide-react";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useStructuredData, buildBreadcrumb } from "../hooks/useStructuredData";
 
 const values = [
   {
@@ -26,9 +27,17 @@ const values = [
 
 export default function Vision() {
   usePageMeta(
-    "Vision & Mission — Hola International College",
-    "Our vision, mission and core values — what drives Hola International College and what we promise every student."
+    "About Us — Vision, Mission, Values | Hola International College Adelaide",
+    "Our vision, mission and the four values that drive Hola International College — an Australian RTO based in Elizabeth South delivering aged care, disability and community services training."
   );
+
+  useStructuredData(
+    buildBreadcrumb([
+      ["Home", "/"],
+      ["Vision", "/vision"],
+    ])
+  );
+
   return (
     <>
       <section className="bg-gradient-to-br from-forest-700 to-forest-900 py-16 text-white sm:py-20">

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useStructuredData, buildBreadcrumb } from "../hooks/useStructuredData";
 
 type FaqItem = { q: string; a: string };
 type FaqCategory = { name: string; items: FaqItem[] };
@@ -109,9 +110,33 @@ function FaqRow({ item }: { item: FaqItem }) {
 
 export default function FAQ() {
   usePageMeta(
-    "FAQ — Hola International College",
-    "Answers to common questions about admissions, fees, study modes, recognition and pathways at Hola International College."
+    "FAQ — Admissions, Fees, Intakes | Hola International College Adelaide",
+    "Answers to common questions about RTO admissions, course fees, monthly intakes, study modes, Recognition of Prior Learning (RPL), VET Student Loans and university pathways at Hola International College, Elizabeth South SA."
   );
+
+  const faqPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: categories.flatMap((cat) =>
+      cat.items.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.a,
+        },
+      }))
+    ),
+  };
+
+  useStructuredData([
+    buildBreadcrumb([
+      ["Home", "/"],
+      ["FAQ", "/faq"],
+    ]),
+    faqPageSchema,
+  ]);
+
   return (
     <>
       <section className="bg-gradient-to-br from-forest-700 to-forest-900 py-16 text-white sm:py-20">

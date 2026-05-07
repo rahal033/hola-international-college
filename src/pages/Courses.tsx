@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Clock, BookOpen, ArrowRight } from "lucide-react";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useStructuredData, buildBreadcrumb } from "../hooks/useStructuredData";
 
 type Course = {
   category: string;
@@ -79,9 +80,57 @@ const categories: { name: string; color: string; courses: Course[] }[] = [
 
 export default function Courses() {
   usePageMeta(
-    "Courses — Hola International College",
-    "Nationally recognised CHC33021, CHC52021, HLTAID011 and medication training. Full-time, part-time and face-to-face study options."
+    "Courses — CHC33021, CHC52021, HLTAID011 | Hola International College Adelaide",
+    "Nationally recognised CHC33021 Individual Support (Ageing & Disability), CHC52021 Diploma of Community Services, HLTAID011 First Aid + CPR and medication training. Full-time, part-time and face-to-face study in Elizabeth South, Adelaide SA."
   );
+
+  const allCourses = categories.flatMap((cat) =>
+    cat.courses.map((c) => ({
+      "@context": "https://schema.org",
+      "@type": "Course",
+      name: c.title,
+      description: c.description,
+      courseCode: c.code,
+      educationalCredentialAwarded: c.code.startsWith("CHC")
+        ? `Certificate / Diploma — ${c.code}`
+        : c.code === "HLTAID011 / HLTAID009"
+        ? "First Aid Statement of Attainment"
+        : "Statement of Attainment",
+      provider: { "@id": "https://www.holainternationalcollege.com.au/#org" },
+      hasCourseInstance: [
+        {
+          "@type": "CourseInstance",
+          courseMode: c.mode.toLowerCase().includes("online") ? "Blended" : "InPerson",
+          location: {
+            "@type": "Place",
+            name: "Hola International College",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "179B Philip Hwy",
+              addressLocality: "Elizabeth South",
+              addressRegion: "SA",
+              postalCode: "5112",
+                addressCountry: "AU",
+            },
+          },
+          courseSchedule: {
+            "@type": "Schedule",
+            repeatFrequency: "P1M",
+            startDate: "2026-06-01",
+          },
+        },
+      ],
+    }))
+  );
+
+  useStructuredData([
+    buildBreadcrumb([
+      ["Home", "/"],
+      ["Courses", "/courses"],
+    ]),
+    ...allCourses,
+  ]);
+
   return (
     <>
       <section className="bg-gradient-to-br from-forest-700 to-forest-900 py-16 text-white sm:py-20">

@@ -2,6 +2,7 @@ import { useState } from "react";
 import type { FormEvent } from "react";
 import { MapPin, Phone, Mail, Clock, Globe } from "lucide-react";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useStructuredData, buildBreadcrumb } from "../hooks/useStructuredData";
 
 const subjects = [
   "Course Information",
@@ -14,8 +15,15 @@ const subjects = [
 
 export default function Contact() {
   usePageMeta(
-    "Contact — Hola International College",
-    "Get in touch with Hola International College. Adelaide SA office, phone, email and international student support."
+    "Contact Us — Elizabeth South, Adelaide | Hola International College",
+    "Contact Hola International College — visit us at 179B Philip Hwy, Elizabeth South SA 5112, call +61 466 331 055, or email info@holainternationalcollege.com.au. International student enquiries welcome."
+  );
+
+  useStructuredData(
+    buildBreadcrumb([
+      ["Home", "/"],
+      ["Contact", "/contact"],
+    ])
   );
   const [submitting, setSubmitting] = useState(false);
 
