@@ -175,11 +175,11 @@ export default function Layout() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <MapPin size={16} className="mt-0.5 flex-shrink-0 text-tan-300" />
-                <span>123 Education Street<br />Adelaide, SA 5000</span>
+                <span>179B Philip Hwy<br />Elizabeth South, SA 5112</span>
               </li>
               <li className="flex items-start gap-2">
                 <Phone size={16} className="mt-0.5 flex-shrink-0 text-tan-300" />
-                <a href="tel:+61123456789" className="hover:text-white">+61 1 2345 6789</a>
+                <a href="tel:+61466331055" className="hover:text-white">+61 466 331 055</a>
               </li>
               <li className="flex items-start gap-2">
                 <Mail size={16} className="mt-0.5 flex-shrink-0 text-tan-300" />

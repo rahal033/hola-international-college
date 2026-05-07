@@ -98,10 +98,10 @@ export default function Contact() {
 
           <div className="space-y-4 lg:col-span-2">
             <InfoCard icon={MapPin} title="Visit Us">
-              <p>123 Education Street<br />Adelaide, SA 5000</p>
+              <p>179B Philip Hwy<br />Elizabeth South, SA 5112</p>
             </InfoCard>
             <InfoCard icon={Phone} title="Call Us">
-              <a href="tel:+61123456789" className="hover:text-forest-700">+61 1 2345 6789</a>
+              <a href="tel:+61466331055" className="hover:text-forest-700">+61 466 331 055</a>
             </InfoCard>
             <InfoCard icon={Mail} title="Email Us">
               <a href="mailto:info@holainternationalcollege.com.au" className="break-all hover:text-forest-700">
