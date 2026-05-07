@@ -14,7 +14,7 @@ type Course = {
 const categories: { name: string; color: string; courses: Course[] }[] = [
   {
     name: "Health & Community Services",
-    color: "bg-blue-100 text-blue-700",
+    color: "bg-forest-100 text-forest-700",
     courses: [
       {
         category: "Health & Community Services",
@@ -84,10 +84,10 @@ export default function Courses() {
   );
   return (
     <>
-      <section className="bg-gradient-to-br from-blue-700 to-blue-900 py-16 text-white sm:py-20">
+      <section className="bg-gradient-to-br from-forest-700 to-forest-900 py-16 text-white sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Our Courses</h1>
-          <p className="mt-4 max-w-2xl text-lg text-blue-100">
+          <p className="mt-4 max-w-2xl text-lg text-forest-100">
             Nationally recognized qualifications and skill sets in health, aged care,
             disability and community services.
           </p>
@@ -113,11 +113,11 @@ export default function Courses() {
                     <h3 className="text-xl font-semibold text-gray-900">{c.title}</h3>
                     <div className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-600">
                       <span className="inline-flex items-center gap-1.5">
-                        <BookOpen size={16} className="text-blue-600" />
+                        <BookOpen size={16} className="text-forest-600" />
                         <span className="font-medium">{c.code}</span>
                       </span>
                       <span className="inline-flex items-center gap-1.5">
-                        <Clock size={16} className="text-blue-600" />
+                        <Clock size={16} className="text-forest-600" />
                         {c.duration}
                       </span>
                       <span className="inline-flex items-center gap-1.5 text-gray-500">
@@ -129,7 +129,7 @@ export default function Courses() {
                     </p>
                     <Link
                       to="/signup"
-                      className="mt-6 inline-flex w-fit items-center gap-2 rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 hover:shadow-md"
+                      className="mt-6 inline-flex w-fit items-center gap-2 rounded-lg bg-forest-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-forest-700 hover:shadow-md"
                     >
                       Apply Now <ArrowRight size={16} />
                     </Link>

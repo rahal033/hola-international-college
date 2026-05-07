@@ -52,10 +52,10 @@ export default function SignUp() {
 
   return (
     <>
-      <section className="bg-gradient-to-br from-blue-700 to-blue-900 py-16 text-white sm:py-20">
+      <section className="bg-gradient-to-br from-forest-700 to-forest-900 py-16 text-white sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Apply Now</h1>
-          <p className="mt-4 max-w-2xl text-lg text-blue-100">
+          <p className="mt-4 max-w-2xl text-lg text-forest-100">
             Take the first step. Complete the application form below and our admissions
             team will be in touch within 2 business days.
           </p>
@@ -158,11 +158,11 @@ export default function SignUp() {
               <input
                 type="checkbox"
                 required
-                className="mt-0.5 h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                className="mt-0.5 h-4 w-4 rounded border-gray-300 text-forest-600 focus:ring-forest-500"
               />
               <span>
                 I agree to the Hola International College{" "}
-                <a href="#" className="font-semibold text-blue-600 hover:text-blue-800">terms & conditions</a>{" "}
+                <a href="#" className="font-semibold text-forest-600 hover:text-forest-800">terms & conditions</a>{" "}
                 and consent to the collection and handling of my personal information in
                 line with the privacy policy.{" "}
                 <span className="text-red-500">*</span>
@@ -172,14 +172,14 @@ export default function SignUp() {
             <button
               type="submit"
               disabled={submitting}
-              className="w-full rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white shadow-sm transition hover:bg-blue-700 hover:shadow-md disabled:opacity-60"
+              className="w-full rounded-lg bg-forest-600 px-6 py-3 font-semibold text-white shadow-sm transition hover:bg-forest-700 hover:shadow-md disabled:opacity-60"
             >
               {submitting ? "Submitting…" : "Submit Application"}
             </button>
 
             <p className="text-center text-sm text-gray-600">
               Already have an account?{" "}
-              <Link to="/login" className="font-semibold text-blue-600 hover:text-blue-800">
+              <Link to="/login" className="font-semibold text-forest-600 hover:text-forest-800">
                 Sign in
               </Link>
             </p>
@@ -191,12 +191,12 @@ export default function SignUp() {
 }
 
 const inputClass =
-  "w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 shadow-sm transition focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500";
+  "w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 shadow-sm transition focus:border-forest-500 focus:outline-none focus:ring-2 focus:ring-forest-500";
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div>
-      <h2 className="mb-5 border-b border-gray-200 pb-2 text-lg font-semibold text-blue-800">
+      <h2 className="mb-5 border-b border-gray-200 pb-2 text-lg font-semibold text-forest-800">
         {title}
       </h2>
       {children}

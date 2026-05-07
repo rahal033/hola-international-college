@@ -69,10 +69,10 @@ export default function Careers() {
   );
   return (
     <>
-      <section className="bg-gradient-to-br from-blue-700 to-blue-900 py-16 text-white sm:py-20">
+      <section className="bg-gradient-to-br from-forest-700 to-forest-900 py-16 text-white sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Careers</h1>
-          <p className="mt-4 max-w-2xl text-lg text-blue-100">
+          <p className="mt-4 max-w-2xl text-lg text-forest-100">
             Build your career with a College that's helping shape the future of care in
             South Australia.
           </p>
@@ -95,7 +95,7 @@ export default function Careers() {
                 key={b.title}
                 className="rounded-xl bg-gray-50 p-6 shadow-sm transition hover:shadow-md"
               >
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 text-blue-700">
+                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-forest-100 text-forest-700">
                   <b.icon size={22} />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900">{b.title}</h3>
@@ -121,18 +121,18 @@ export default function Careers() {
                   <div className="min-w-0 flex-1">
                     <div className="mb-2 flex flex-wrap items-center gap-2">
                       <h3 className="text-xl font-semibold text-gray-900">{j.title}</h3>
-                      <span className="rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700">
+                      <span className="rounded-full bg-forest-100 px-3 py-1 text-xs font-semibold text-forest-700">
                         {j.department}
                       </span>
                     </div>
                     <div className="flex items-center gap-1.5 text-sm text-gray-600">
-                      <MapPin size={14} className="text-blue-600" /> {j.location}
+                      <MapPin size={14} className="text-forest-600" /> {j.location}
                     </div>
                     <p className="mt-3 text-sm leading-relaxed text-gray-600">{j.description}</p>
                   </div>
                   <a
                     href="mailto:careers@holainternationalcollege.com.au"
-                    className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 hover:shadow-md"
+                    className="inline-flex items-center gap-2 rounded-lg bg-forest-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-forest-700 hover:shadow-md"
                   >
                     Apply Now <ArrowRight size={16} />
                   </a>
@@ -144,15 +144,15 @@ export default function Careers() {
       </section>
 
       <section className="bg-white py-16 sm:py-20">
-        <div className="mx-auto max-w-4xl rounded-2xl bg-gradient-to-br from-blue-700 to-blue-900 px-6 py-12 text-center text-white shadow-lg sm:px-12">
+        <div className="mx-auto max-w-4xl rounded-2xl bg-gradient-to-br from-forest-700 to-forest-900 px-6 py-12 text-center text-white shadow-lg sm:px-12">
           <h2 className="text-3xl font-bold">Don't See the Right Role?</h2>
-          <p className="mx-auto mt-3 max-w-xl text-blue-100">
+          <p className="mx-auto mt-3 max-w-xl text-forest-100">
             We're always interested in connecting with great people. Send us your résumé
             and we'll be in touch when a suitable role opens up.
           </p>
           <a
             href="mailto:careers@holainternationalcollege.com.au"
-            className="mt-6 inline-flex rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 shadow-md transition hover:bg-blue-50"
+            className="mt-6 inline-flex rounded-lg bg-white px-6 py-3 font-semibold text-forest-700 shadow-md transition hover:bg-forest-50"
           >
             careers@holainternationalcollege.com.au
           </a>

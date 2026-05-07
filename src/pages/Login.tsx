@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ExternalLink, GraduationCap, BookOpen, ShieldCheck } from "lucide-react";
 import { usePageMeta } from "../hooks/usePageMeta";
+import Logo from "../components/Logo";
 
 const CANVAS_URL = "https://canvas.instructure.com/login/canvas";
 
@@ -15,9 +16,7 @@ export default function Login() {
       <div className="mx-auto w-full max-w-2xl">
         <div className="rounded-2xl bg-white p-8 shadow-lg sm:p-10">
           <div className="flex flex-col items-center text-center">
-            <span className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-blue-900 text-2xl font-bold text-white shadow-sm">
-              H
-            </span>
+            <Logo size={56} />
             <h1 className="mt-4 text-3xl font-bold text-gray-900">Student & Trainer Portal</h1>
             <p className="mt-2 max-w-md text-sm text-gray-600">
               Hola International College uses Canvas LMS for course delivery, assessments and
@@ -30,7 +29,7 @@ export default function Login() {
               href={CANVAS_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex w-full items-center justify-center gap-2 rounded-lg bg-blue-600 px-6 py-3.5 text-base font-semibold text-white shadow-sm transition hover:bg-blue-700 hover:shadow-md"
+              className="flex w-full items-center justify-center gap-2 rounded-lg bg-forest-600 px-6 py-3.5 text-base font-semibold text-white shadow-sm transition hover:bg-forest-700 hover:shadow-md"
             >
               Log in to Canvas LMS <ExternalLink size={16} />
             </a>
@@ -38,7 +37,7 @@ export default function Login() {
               href="https://canvas.instructure.com/login/canvas/forgot"
               target="_blank"
               rel="noopener noreferrer"
-              className="block text-center text-sm font-medium text-blue-600 hover:text-blue-800"
+              className="block text-center text-sm font-medium text-forest-600 hover:text-forest-800"
             >
               Forgot your Canvas password?
             </a>
@@ -46,7 +45,7 @@ export default function Login() {
 
           <p className="mt-8 border-t border-gray-100 pt-6 text-center text-sm text-gray-600">
             New to Hola International College?{" "}
-            <Link to="/signup" className="font-semibold text-blue-600 hover:text-blue-800">
+            <Link to="/signup" className="font-semibold text-forest-600 hover:text-forest-800">
               Apply for a course
             </Link>
           </p>
@@ -96,7 +95,7 @@ function FeatureCard({
 }) {
   return (
     <div className="rounded-xl bg-white p-5 shadow-sm">
-      <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 text-blue-700">
+      <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-forest-100 text-forest-700">
         <Icon size={20} />
       </div>
       <h3 className="text-sm font-semibold text-gray-900">{title}</h3>

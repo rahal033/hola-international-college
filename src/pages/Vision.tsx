@@ -31,10 +31,10 @@ export default function Vision() {
   );
   return (
     <>
-      <section className="bg-gradient-to-br from-blue-700 to-blue-900 py-16 text-white sm:py-20">
+      <section className="bg-gradient-to-br from-forest-700 to-forest-900 py-16 text-white sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Our Vision & Mission</h1>
-          <p className="mt-4 max-w-2xl text-lg text-blue-100">
+          <p className="mt-4 max-w-2xl text-lg text-forest-100">
             What drives us, and what we promise to every student who joins Hola International College.
           </p>
         </div>
@@ -42,9 +42,9 @@ export default function Vision() {
 
       <section className="bg-gray-50 py-16 sm:py-20">
         <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 md:grid-cols-2 lg:px-8">
-          <div className="rounded-2xl bg-blue-700 p-8 text-white shadow-lg sm:p-10">
+          <div className="rounded-2xl bg-forest-700 p-8 text-white shadow-lg sm:p-10">
             <h2 className="text-2xl font-bold sm:text-3xl">Our Vision</h2>
-            <p className="mt-4 text-base leading-relaxed text-blue-50 sm:text-lg">
+            <p className="mt-4 text-base leading-relaxed text-forest-50 sm:text-lg">
               To be the leading RTO recognized for excellence in health, aged care, and
               community services education — empowering a new generation of compassionate,
               confident professionals who transform lives in their communities.
@@ -78,7 +78,7 @@ export default function Vision() {
                 key={v.title}
                 className="rounded-xl bg-gray-50 p-6 text-center shadow-sm transition hover:shadow-md"
               >
-                <div className="mx-auto mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-blue-100 text-blue-700">
+                <div className="mx-auto mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-forest-100 text-forest-700">
                   <v.icon size={26} />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900">{v.title}</h3>

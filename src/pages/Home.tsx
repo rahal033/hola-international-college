@@ -45,20 +45,20 @@ export default function Home() {
   );
   return (
     <>
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-700 via-blue-800 to-blue-900 text-white">
+      <section className="relative overflow-hidden bg-gradient-to-br from-forest-700 via-forest-800 to-forest-900 text-white">
         <div className="absolute inset-0 opacity-10" aria-hidden>
           <div className="absolute -left-20 -top-20 h-96 w-96 rounded-full bg-white blur-3xl" />
-          <div className="absolute -bottom-32 -right-10 h-96 w-96 rounded-full bg-blue-300 blur-3xl" />
+          <div className="absolute -bottom-32 -right-10 h-96 w-96 rounded-full bg-forest-300 blur-3xl" />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-32">
           <div className="max-w-3xl">
-            <span className="mb-4 inline-block rounded-full bg-white/10 px-4 py-1 text-sm font-medium text-blue-100 ring-1 ring-white/20">
+            <span className="mb-4 inline-block rounded-full bg-white/10 px-4 py-1 text-sm font-medium text-forest-100 ring-1 ring-white/20">
               Registered Training Organization
             </span>
             <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
               Your Future Starts at Hola International College
             </h1>
-            <p className="mt-6 text-lg text-blue-100 sm:text-xl">
+            <p className="mt-6 text-lg text-forest-100 sm:text-xl">
               Earn nationally recognized qualifications in health, aged care, disability
               support and community services — taught by industry experts and built around
               the way you want to learn.
@@ -66,7 +66,7 @@ export default function Home() {
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 to="/signup"
-                className="inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 text-base font-semibold text-blue-700 shadow-lg transition hover:bg-blue-50 hover:shadow-xl"
+                className="inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 text-base font-semibold text-forest-700 shadow-lg transition hover:bg-forest-50 hover:shadow-xl"
               >
                 Apply Now <ArrowRight size={18} />
               </Link>
@@ -85,7 +85,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 py-12 sm:px-6 lg:grid-cols-4 lg:px-8">
           {stats.map((s) => (
             <div key={s.label} className="text-center">
-              <div className="text-3xl font-bold text-blue-700 sm:text-4xl">{s.value}</div>
+              <div className="text-3xl font-bold text-forest-700 sm:text-4xl">{s.value}</div>
               <div className="mt-1 text-sm font-medium text-gray-600 sm:text-base">{s.label}</div>
             </div>
           ))}
@@ -108,7 +108,7 @@ export default function Home() {
                 key={f.title}
                 className="rounded-xl bg-white p-6 shadow-sm transition hover:shadow-md"
               >
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 text-blue-700">
+                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-forest-100 text-forest-700">
                   <f.icon size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900">{f.title}</h3>
@@ -120,16 +120,16 @@ export default function Home() {
       </section>
 
       <section className="bg-white py-16 sm:py-24">
-        <div className="mx-auto max-w-4xl rounded-2xl bg-gradient-to-br from-blue-700 to-blue-900 px-6 py-12 text-center text-white shadow-lg sm:px-12 sm:py-16">
+        <div className="mx-auto max-w-4xl rounded-2xl bg-gradient-to-br from-forest-700 to-forest-900 px-6 py-12 text-center text-white shadow-lg sm:px-12 sm:py-16">
           <h2 className="text-3xl font-bold sm:text-4xl">Ready to Start Your Journey?</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-blue-100">
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-forest-100">
             Join over 2,000 students building careers that matter. Applications are open
             for monthly intakes throughout the year.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
               to="/signup"
-              className="inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 shadow-md transition hover:bg-blue-50"
+              className="inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 font-semibold text-forest-700 shadow-md transition hover:bg-forest-50"
             >
               Apply Now <ArrowRight size={18} />
             </Link>

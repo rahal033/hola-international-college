@@ -114,12 +114,12 @@ export default function FAQ() {
   );
   return (
     <>
-      <section className="bg-gradient-to-br from-blue-700 to-blue-900 py-16 text-white sm:py-20">
+      <section className="bg-gradient-to-br from-forest-700 to-forest-900 py-16 text-white sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
             Frequently Asked Questions
           </h1>
-          <p className="mt-4 max-w-2xl text-lg text-blue-100">
+          <p className="mt-4 max-w-2xl text-lg text-forest-100">
             Answers to the questions our students and applicants ask most often.
           </p>
         </div>
@@ -129,7 +129,7 @@ export default function FAQ() {
         <div className="mx-auto max-w-4xl space-y-10 px-4 sm:px-6 lg:px-8">
           {categories.map((cat) => (
             <div key={cat.name} className="rounded-xl bg-white p-6 shadow-sm sm:p-8">
-              <h2 className="mb-4 text-xl font-bold text-blue-800 sm:text-2xl">{cat.name}</h2>
+              <h2 className="mb-4 text-xl font-bold text-forest-800 sm:text-2xl">{cat.name}</h2>
               <div>
                 {cat.items.map((it) => (
                   <FaqRow key={it.q} item={it} />
@@ -141,15 +141,15 @@ export default function FAQ() {
       </section>
 
       <section className="bg-white py-16 sm:py-20">
-        <div className="mx-auto max-w-4xl rounded-2xl bg-blue-700 px-6 py-12 text-center text-white shadow-lg sm:px-12">
+        <div className="mx-auto max-w-4xl rounded-2xl bg-forest-700 px-6 py-12 text-center text-white shadow-lg sm:px-12">
           <h2 className="text-3xl font-bold">Still Have Questions?</h2>
-          <p className="mx-auto mt-3 max-w-xl text-blue-100">
+          <p className="mx-auto mt-3 max-w-xl text-forest-100">
             Our admissions team is here to help. Get in touch and we'll respond within one
             business day.
           </p>
           <Link
             to="/contact"
-            className="mt-6 inline-flex rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 shadow-md transition hover:bg-blue-50"
+            className="mt-6 inline-flex rounded-lg bg-white px-6 py-3 font-semibold text-forest-700 shadow-md transition hover:bg-forest-50"
           >
             Contact Us
           </Link>
