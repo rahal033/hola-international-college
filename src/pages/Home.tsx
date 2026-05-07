@@ -9,10 +9,10 @@ import {
 import { usePageMeta } from "../hooks/usePageMeta";
 
 const stats = [
-  { value: "2,000+", label: "Students" },
-  { value: "5", label: "Courses" },
-  { value: "50+", label: "Industry Partners" },
-  { value: "10+", label: "Years of Excellence" },
+  { value: "5", label: "Nationally Recognised Courses" },
+  { value: "3", label: "Specialist Areas" },
+  { value: "12", label: "Intakes per Year" },
+  { value: "AQF", label: "Aligned Qualifications" },
 ];
 
 const features = [
@@ -123,7 +123,7 @@ export default function Home() {
         <div className="mx-auto max-w-4xl rounded-2xl bg-gradient-to-br from-forest-700 to-forest-900 px-6 py-12 text-center text-white shadow-lg sm:px-12 sm:py-16">
           <h2 className="text-3xl font-bold sm:text-4xl">Ready to Start Your Journey?</h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-forest-100">
-            Join over 2,000 students building careers that matter. Applications are open
+            Build a career that matters in health, aged care, disability or community services. Applications are open
             for monthly intakes throughout the year.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
