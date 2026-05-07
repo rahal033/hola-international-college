@@ -123,14 +123,15 @@ export default function Layout() {
       <footer className="border-t border-forest-800 bg-forest-900 text-gray-300">
         <div className="bg-forest-800/40">
           <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3 text-xs text-forest-100/80 sm:px-6 lg:px-8">
-            <span className="flex items-center gap-3">
+            <span className="flex flex-wrap items-center gap-x-3 gap-y-1">
+              <span><span className="font-semibold text-white">Hola International College Pty Ltd</span> · Established 2023</span>
+              <span className="hidden text-forest-100/40 sm:inline">·</span>
               <span><span className="font-semibold text-white">RTO:</span> <span className="text-tan-300">registration in progress</span></span>
               <span className="hidden text-forest-100/40 sm:inline">·</span>
               <span><span className="font-semibold text-white">CRICOS:</span> <span className="text-tan-300">coming soon</span></span>
               <span className="hidden text-forest-100/40 sm:inline">·</span>
-              <span><span className="font-semibold text-white">ABN:</span> <span className="text-tan-300">to be added</span></span>
+              <span><span className="font-semibold text-white">ABN:</span> <span className="text-tan-300">pending</span></span>
             </span>
-            <span className="text-forest-100/60">A South Australian Registered Training Organisation</span>
           </div>
         </div>
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
@@ -212,7 +213,7 @@ export default function Layout() {
         </div>
         <div className="border-t border-forest-800">
           <div className="mx-auto max-w-7xl px-4 py-6 text-center text-xs text-gray-400 sm:px-6 lg:px-8">
-            © {new Date().getFullYear()} Hola International College. All rights reserved.
+            © {new Date().getFullYear()} Hola International College Pty Ltd. All rights reserved.
           </div>
         </div>
       </footer>
