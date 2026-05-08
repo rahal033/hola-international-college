@@ -144,16 +144,21 @@ export default function Layout() {
               A Registered Training Organisation delivering nationally recognised
               qualifications in health, aged care, disability and community services.
             </p>
-            <div className="mt-5 flex gap-2.5 text-sm font-bold">
-              <a href="#" aria-label="Facebook" className="flex h-9 w-9 items-center justify-center rounded-full bg-tan-300 text-forest-900 transition hover:bg-tan-200 hover:scale-105">
-                f
-              </a>
-              <a href="#" aria-label="Instagram" className="flex h-9 w-9 items-center justify-center rounded-full bg-tan-300 text-forest-900 transition hover:bg-tan-200 hover:scale-105">
-                ig
-              </a>
-              <a href="#" aria-label="LinkedIn" className="flex h-9 w-9 items-center justify-center rounded-full bg-tan-300 text-forest-900 transition hover:bg-tan-200 hover:scale-105">
-                in
-              </a>
+            <div className="mt-5">
+              <div className="mb-2 text-[11px] font-medium uppercase tracking-[0.18em] text-forest-100/60">
+                Social — coming soon
+              </div>
+              <div className="flex gap-2.5 text-sm font-bold opacity-50" aria-label="Social media accounts coming soon">
+                <span title="Facebook page coming soon" className="flex h-9 w-9 items-center justify-center rounded-full bg-forest-800 text-forest-100/70 ring-1 ring-forest-100/10">
+                  f
+                </span>
+                <span title="Instagram page coming soon" className="flex h-9 w-9 items-center justify-center rounded-full bg-forest-800 text-forest-100/70 ring-1 ring-forest-100/10">
+                  ig
+                </span>
+                <span title="LinkedIn page coming soon" className="flex h-9 w-9 items-center justify-center rounded-full bg-forest-800 text-forest-100/70 ring-1 ring-forest-100/10">
+                  in
+                </span>
+              </div>
             </div>
           </div>
 
