@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import Careers from "./pages/Careers";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 
 const router = createBrowserRouter([
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
       { path: "careers", element: <Careers /> },
       { path: "login", element: <Login /> },
       { path: "signup", element: <SignUp /> },
+      { path: "privacy", element: <PrivacyPolicy /> },
       { path: "*", element: <NotFound /> },
     ],
   },

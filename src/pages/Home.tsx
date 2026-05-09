@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { useStructuredData, buildBreadcrumb } from "../hooks/useStructuredData";
+import HeroIllustration from "../components/HeroIllustration";
 
 const stats = [
   { value: "5", label: "Nationally Recognised Courses" },
@@ -85,7 +86,7 @@ export default function Home() {
           <div className="absolute -left-20 -top-20 h-96 w-96 rounded-full bg-white blur-3xl" />
           <div className="absolute -bottom-32 -right-10 h-96 w-96 rounded-full bg-tan-300 blur-3xl" />
         </div>
-        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-32">
+        <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 py-20 sm:px-6 sm:py-28 lg:grid-cols-[minmax(0,1fr)_minmax(0,420px)] lg:gap-12 lg:px-8 lg:py-32">
           <div className="max-w-3xl">
             <div className="mb-4 flex flex-wrap items-center gap-2">
               <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-sm font-medium text-forest-100 ring-1 ring-white/20">
@@ -123,6 +124,9 @@ export default function Home() {
                 Browse courses
               </Link>
             </div>
+          </div>
+          <div className="hidden items-center justify-center lg:flex">
+            <HeroIllustration className="h-auto w-full max-w-md" />
           </div>
         </div>
       </section>

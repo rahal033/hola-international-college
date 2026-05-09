@@ -26,15 +26,49 @@ export default function Contact() {
     ])
   );
   const [submitting, setSubmitting] = useState(false);
+  const [status, setStatus] = useState<"idle" | "ok" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState<string>("");
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setSubmitting(true);
-    setTimeout(() => {
+    setStatus("idle");
+    const form = e.target as HTMLFormElement;
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    // Honeypot — bots usually fill all fields including hidden ones
+    if (data._honey) {
       setSubmitting(false);
-      alert("Thanks — your message has been received. We'll be in touch within one business day.");
-      (e.target as HTMLFormElement).reset();
-    }, 400);
+      setStatus("ok"); // pretend success to bots
+      form.reset();
+      return;
+    }
+
+    try {
+      const res = await fetch(
+        "https://formsubmit.co/ajax/info@holainternationalcollege.com.au",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({
+            ...data,
+            _subject: `Website contact: ${data.subject || "General"}`,
+            _template: "table",
+            _captcha: "false",
+          }),
+        }
+      );
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      setStatus("ok");
+      form.reset();
+    } catch (err) {
+      setStatus("error");
+      setErrorMsg(
+        err instanceof Error ? err.message : "Couldn't send. Please email info@ directly."
+      );
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -93,6 +127,42 @@ export default function Contact() {
                     className={inputClass}
                   />
                 </Field>
+
+                {/* Honeypot — hidden from users, bots fill it and we drop them */}
+                <input
+                  type="text"
+                  name="_honey"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  className="hidden"
+                />
+
+                {status === "ok" && (
+                  <div
+                    role="status"
+                    className="rounded-lg border border-green-200 bg-green-50 p-4 text-sm text-green-900"
+                  >
+                    <strong className="font-semibold">Message sent.</strong> We'll be in touch
+                    within one business day. If it's urgent, call{" "}
+                    <a href="tel:+61466331055" className="underline">+61 466 331 055</a>.
+                  </div>
+                )}
+
+                {status === "error" && (
+                  <div
+                    role="alert"
+                    className="rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-900"
+                  >
+                    <strong className="font-semibold">Couldn't send.</strong> {errorMsg}{" "}
+                    Please email{" "}
+                    <a href="mailto:info@holainternationalcollege.com.au" className="underline">
+                      info@holainternationalcollege.com.au
+                    </a>{" "}
+                    directly.
+                  </div>
+                )}
+
                 <button
                   type="submit"
                   disabled={submitting}

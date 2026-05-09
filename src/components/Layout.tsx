@@ -183,6 +183,7 @@ export default function Layout() {
               <li><Link to="/contact" className="hover:text-white">Contact</Link></li>
               <li><Link to="/login" className="hover:text-white">Student Portal</Link></li>
               <li><Link to="/signup" className="hover:text-white">Apply Now</Link></li>
+              <li><Link to="/privacy" className="hover:text-white">Privacy Policy</Link></li>
             </ul>
           </div>
 
