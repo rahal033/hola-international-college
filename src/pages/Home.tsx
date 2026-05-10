@@ -10,7 +10,6 @@ import {
 import { motion } from "motion/react";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { useStructuredData, buildBreadcrumb } from "../hooks/useStructuredData";
-import HeroIllustration from "../components/HeroIllustration";
 
 const stats = [
   { value: "5", label: "Nationally recognised courses" },
@@ -64,14 +63,17 @@ export default function Home() {
 
   return (
     <>
-      {/* HERO - editorial split, oversized serif headline */}
+      {/* HERO - editorial typography, animated aurora background */}
       <section className="relative overflow-hidden bg-gradient-to-br from-forest-700 via-forest-800 to-forest-900 text-white">
-        <div className="absolute inset-0 opacity-10" aria-hidden>
-          <div className="absolute -left-20 -top-20 h-96 w-96 rounded-full bg-white blur-3xl" />
-          <div className="absolute -bottom-32 -right-10 h-96 w-96 rounded-full bg-tan-300 blur-3xl" />
+        {/* Animated aurora-style background blobs - subtle, slow */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
+          <div className="absolute -left-40 -top-40 h-[34rem] w-[34rem] rounded-full bg-tan-300/20 blur-3xl animate-blob-a" />
+          <div className="absolute right-[-10rem] top-[10%] h-[28rem] w-[28rem] rounded-full bg-forest-500/30 blur-3xl animate-blob-b" />
+          <div className="absolute -bottom-40 left-1/3 h-[30rem] w-[30rem] rounded-full bg-tan-200/15 blur-3xl animate-blob-c" />
+          <div className="absolute right-[15%] -bottom-10 h-72 w-72 rounded-full bg-white/10 blur-3xl animate-blob-d" />
         </div>
 
-        <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-20 sm:px-6 sm:py-28 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,400px)] lg:gap-16 lg:px-8 lg:py-36">
+        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-36">
           <motion.div
             className="max-w-3xl"
             initial={{ opacity: 0, y: 20 }}
@@ -133,16 +135,8 @@ export default function Home() {
             </motion.div>
           </motion.div>
 
-          <motion.div
-            className="hidden items-center justify-center lg:flex"
-            initial={{ opacity: 0, scale: 0.92 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <HeroIllustration className="h-auto w-full max-w-md" />
-          </motion.div>
+          {/* Decorative illustration removed - typography + animated background carry the hero. */}
         </div>
-
       </section>
 
       {/* STATS - paper background, serif numerals, divider rules */}
