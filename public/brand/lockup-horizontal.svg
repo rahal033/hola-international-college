@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2210 600" width="2210" height="600">
-<rect width="2210" height="600" fill="#F4F1EA"></rect>
-<g transform="translate(100, 120) scale(3.6)"><rect x="18" y="18" width="12" height="64" rx="2" fill="#1F5A3D"></rect><rect x="70" y="18" width="12" height="64" rx="2" fill="#1F5A3D"></rect><circle cx="50" cy="50" r="9" fill="#D4A574"></circle><path d="M 30 50 Q 50 70 70 50 L 70 56 Q 50 76 30 56 Z" fill="#1F5A3D" opacity="0.85"></path></g>
-<g font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif" fill="#1F5A3D">
+<rect width="2210" height="600" fill="#F1F6F4"></rect>
+<g transform="translate(100, 120) scale(3.6)"><rect x="18" y="18" width="12" height="64" rx="2" fill="#0E5B5B"></rect><rect x="70" y="18" width="12" height="64" rx="2" fill="#0E5B5B"></rect><circle cx="50" cy="50" r="9" fill="#F08A6E"></circle><path d="M 30 50 Q 50 70 70 50 L 70 56 Q 50 76 30 56 Z" fill="#0E5B5B" opacity="0.85"></path></g>
+<g font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif" fill="#0E5B5B">
   <text x="550" y="308" font-size="130" font-weight="600" letter-spacing="-2.6">Hola International College</text>
-  <text x="550" y="399" font-size="41.6" font-weight="400" letter-spacing="7.4879999999999995" fill="#1F5A3D" opacity="0.6">REGISTERED TRAINING ORGANISATION</text>
+  <text x="550" y="399" font-size="41.6" font-weight="400" letter-spacing="7.4879999999999995" fill="#0E5B5B" opacity="0.6">REGISTERED TRAINING ORGANISATION</text>
 </g>
 </svg>
