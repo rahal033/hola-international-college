@@ -4,48 +4,33 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Eucalypt brand palette — Hola International College
-        // primary: forest green; accent: warm tan; paper: warm off-white
+        // Ochre brand palette - black + Australian ochre yellow
+        // primary: ink #1A1A1A; accent: ochre #E8A317
         forest: {
-          50: "#F1F6F2",
-          100: "#DCE8DF",
-          200: "#B5CFBC",
-          300: "#85B093",
-          400: "#578E6C",
-          500: "#357052",
-          600: "#1F5A3D", // primary brand color
-          700: "#194B33",
-          800: "#143C29",
-          900: "#0F1A14",
+          50: "#FAF7F0",
+          100: "#E5E5E5",
+          200: "#C7C7C7",
+          300: "#A0A0A0",
+          400: "#6B6B6B",
+          500: "#404040",
+          600: "#1A1A1A",
+          700: "#141414",
+          800: "#0F0F0F",
+          900: "#050505",
         },
         tan: {
-          100: "#F5EBDB",
-          200: "#E8C896",
-          300: "#D4A574",
-          400: "#B98855",
-          500: "#9C6E40",
+          100: "#FFF1CF",
+          200: "#FAD478",
+          300: "#E8A317",
+          400: "#B8800F",
+          500: "#8A6008",
         },
-        paper: "#F4F1EA",
-        ink: "#0F1A14",
+        paper: "#FAF7F0",
+        ink: "#1A1A1A",
       },
       fontFamily: {
-        sans: [
-          "Inter",
-          "ui-sans-serif",
-          "system-ui",
-          "-apple-system",
-          "Segoe UI",
-          "Roboto",
-          "sans-serif",
-        ],
-        serif: [
-          "Fraunces",
-          "ui-serif",
-          "Georgia",
-          "Cambria",
-          "Times New Roman",
-          "serif",
-        ],
+        sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"],
+        serif: ["Fraunces", "ui-serif", "Georgia", "Cambria", "Times New Roman", "serif"],
       },
     },
   },
