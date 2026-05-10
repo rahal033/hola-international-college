@@ -7,7 +7,7 @@ const CANVAS_URL = "https://canvas.instructure.com/login/canvas";
 
 export default function Login() {
   usePageMeta(
-    "Student & Trainer Login (Canvas LMS) — Hola International College",
+    "Student & Trainer Login (Canvas LMS) - Hola International College",
     "Log in to Canvas LMS to access your Hola International College courses, assessments and grades. Student portal for CHC qualifications, first aid and medication training."
   );
 

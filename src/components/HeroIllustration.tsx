@@ -1,7 +1,7 @@
 /**
  * Decorative SVG composition for the homepage hero. Echoes the brand's
  * H + care-dot motif as scattered overlapping circles being cradled by
- * arcs — the visual language of "people being supported." Tan-on-green
+ * arcs - the visual language of "people being supported." Tan-on-green
  * for the dark hero background.
  *
  * Pure SVG, zero raster, no copyright concerns. Replaces "empty dark
@@ -27,7 +27,7 @@ export default function HeroIllustration({ className }: { className?: string }) 
       {/* soft glow halo behind composition */}
       <circle cx="300" cy="300" r="280" fill="url(#hicGlow)" />
 
-      {/* large back arc — community embrace */}
+      {/* large back arc - community embrace */}
       <path
         d="M 100 400 Q 300 540 500 400 L 500 430 Q 300 580 100 430 Z"
         fill="#D4A574"
@@ -41,7 +41,7 @@ export default function HeroIllustration({ className }: { className?: string }) 
         opacity="0.5"
       />
 
-      {/* care dots — different sizes, scattered */}
+      {/* care dots - different sizes, scattered */}
       <circle cx="220" cy="280" r="42" fill="#D4A574" opacity="0.85" />
       <circle cx="320" cy="240" r="56" fill="#E8C896" />
       <circle cx="420" cy="290" r="38" fill="#D4A574" opacity="0.9" />
@@ -50,7 +50,7 @@ export default function HeroIllustration({ className }: { className?: string }) 
       <circle cx="380" cy="180" r="18" fill="#E8C896" opacity="0.8" />
       <circle cx="260" cy="180" r="20" fill="#D4A574" opacity="0.5" />
 
-      {/* H pillars — barely there, tying composition to brand */}
+      {/* H pillars - barely there, tying composition to brand */}
       <rect x="80" y="150" width="14" height="280" rx="3" fill="#D4A574" opacity="0.18" />
       <rect x="506" y="150" width="14" height="280" rx="3" fill="#D4A574" opacity="0.18" />
 

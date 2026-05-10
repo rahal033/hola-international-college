@@ -6,7 +6,7 @@ type LogoProps = {
 };
 
 /**
- * Hola International College mark — H + care dot + cradling arc.
+ * Hola International College mark - H + care dot + cradling arc.
  * Eucalypt palette by default. Use variant="reverse" on dark backgrounds
  * and variant="mono" for single-color (e.g. emails, embossing).
  */

@@ -15,10 +15,10 @@ const educationLevels = [
 const australianStates = ["ACT", "NSW", "NT", "QLD", "SA", "TAS", "VIC", "WA"];
 
 const courses = [
-  "Certificate III in Individual Support (Ageing) — CHC33021",
-  "Certificate III in Individual Support (Disability) — CHC33021",
-  "Diploma of Community Services — CHC52021",
-  "First Aid + CPR — HLTAID011 / HLTAID009",
+  "Certificate III in Individual Support (Ageing) - CHC33021",
+  "Certificate III in Individual Support (Disability) - CHC33021",
+  "Diploma of Community Services - CHC52021",
+  "First Aid + CPR - HLTAID011 / HLTAID009",
   "Medication Training",
 ];
 
@@ -35,8 +35,8 @@ const intakes = (() => {
 
 export default function SignUp() {
   usePageMeta(
-    "Apply Now — CHC, First Aid, Medication Training | Hola International College",
-    "Apply online for CHC33021 Individual Support, CHC52021 Diploma of Community Services, HLTAID011 First Aid + CPR or Medication Training. Monthly intakes — apply today, hear back in 2 business days."
+    "Apply Now - CHC, First Aid, Medication Training | Hola International College",
+    "Apply online for CHC33021 Individual Support, CHC52021 Diploma of Community Services, HLTAID011 First Aid + CPR or Medication Training. Monthly intakes - apply today, hear back in 2 business days."
   );
   const [submitting, setSubmitting] = useState(false);
   const [status, setStatus] = useState<"idle" | "ok" | "error">("idle");
@@ -94,7 +94,7 @@ export default function SignUp() {
             Take the <span className="italic text-tan-300">first step.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-forest-100">
-            Complete the application below — our admissions team will be in touch within
+            Complete the application below - our admissions team will be in touch within
             2 business days to confirm details and walk you through next steps.
           </p>
         </div>
@@ -211,7 +211,7 @@ export default function SignUp() {
               </span>
             </label>
 
-            {/* Honeypot — hidden from users, bots fill it and we drop them */}
+            {/* Honeypot - hidden from users, bots fill it and we drop them */}
             <input
               type="text"
               name="_honey"

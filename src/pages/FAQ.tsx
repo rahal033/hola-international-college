@@ -21,7 +21,7 @@ const categories: FaqCategory[] = [
       },
       {
         q: "When are the intakes?",
-        a: "We run monthly intakes throughout the year for most qualifications. First Aid and short-course skill sets are scheduled fortnightly — check the Courses page for the next available dates.",
+        a: "We run monthly intakes throughout the year for most qualifications. First Aid and short-course skill sets are scheduled fortnightly - check the Courses page for the next available dates.",
       },
       {
         q: "Can international students enrol?",
@@ -38,7 +38,7 @@ const categories: FaqCategory[] = [
       },
       {
         q: "Do you offer scholarships?",
-        a: "Yes — we offer a limited number of merit and equity scholarships each intake. Eligibility and application details are available from the admissions team.",
+        a: "Yes - we offer a limited number of merit and equity scholarships each intake. Eligibility and application details are available from the admissions team.",
       },
       {
         q: "Are VET Student Loans available?",
@@ -110,7 +110,7 @@ function FaqRow({ item }: { item: FaqItem }) {
 
 export default function FAQ() {
   usePageMeta(
-    "FAQ — Admissions, Fees, Intakes | Hola International College Adelaide",
+    "FAQ - Admissions, Fees, Intakes | Hola International College Adelaide",
     "Answers to common questions about RTO admissions, course fees, monthly intakes, study modes, Recognition of Prior Learning (RPL), VET Student Loans and university pathways at Hola International College, Elizabeth South SA."
   );
 
@@ -146,7 +146,7 @@ export default function FAQ() {
             Questions, <span className="italic text-tan-300">answered.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-forest-100">
-            Everything our students and applicants ask most often — admissions, fees,
+            Everything our students and applicants ask most often - admissions, fees,
             study modes, recognition, pathways.
           </p>
         </div>

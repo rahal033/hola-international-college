@@ -31,7 +31,7 @@ const jobs = [
     department: "Training & Assessment",
     location: "Adelaide, SA",
     description:
-      "Deliver Certificate III in Individual Support (Ageing) — combining classroom training, simulation and workplace assessment.",
+      "Deliver Certificate III in Individual Support (Ageing) - combining classroom training, simulation and workplace assessment.",
   },
   {
     title: "Disability Support Trainer",
@@ -65,7 +65,7 @@ const jobs = [
 
 export default function Careers() {
   usePageMeta(
-    "Careers — Trainer, Assessor & Support Roles | Hola International College Adelaide",
+    "Careers - Trainer, Assessor & Support Roles | Hola International College Adelaide",
     "Work with Hola International College in Elizabeth South, Adelaide. Open roles for aged care trainers, disability support trainers, first aid instructors, student support and admissions coordinators."
   );
 
@@ -98,7 +98,7 @@ export default function Careers() {
               Why Work With Us?
             </h2>
             <p className="mt-4 text-lg text-gray-600">
-              Hola International College is more than an employer — it's a community.
+              Hola International College is more than an employer - it's a community.
             </p>
           </div>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

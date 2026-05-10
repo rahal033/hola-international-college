@@ -6,7 +6,7 @@ const lastUpdated = "9 May 2026";
 
 export default function PrivacyPolicy() {
   usePageMeta(
-    "Privacy Policy — Hola International College",
+    "Privacy Policy - Hola International College",
     "How Hola International College Pty Ltd collects, uses, stores and discloses your personal information under the Australian Privacy Principles."
   );
 
@@ -62,7 +62,7 @@ export default function PrivacyPolicy() {
               <li>National Police Check results (where required for placement)</li>
               <li>Course progress, assessment results and attendance records</li>
               <li>Payment and billing details (we do not store full credit card numbers)</li>
-              <li>Website analytics (anonymised — see section 9)</li>
+              <li>Website analytics (anonymised - see section 9)</li>
             </ul>
           </Block>
 
@@ -76,7 +76,7 @@ export default function PrivacyPolicy() {
               <li>Placement supervisor reports during work-based learning</li>
             </ul>
             <p>
-              In limited cases we may collect information from third parties — for example,
+              In limited cases we may collect information from third parties - for example,
               previous training providers (with your consent for credit transfer), or your
               education agent if you applied through one.
             </p>
@@ -126,12 +126,12 @@ export default function PrivacyPolicy() {
               Some of the services we use store data outside Australia. In particular:
             </p>
             <ul className="ml-6 list-disc space-y-1">
-              <li><strong>Microsoft 365</strong> (email, file storage, Teams) — under our
+              <li><strong>Microsoft 365</strong> (email, file storage, Teams) - under our
                 Microsoft 365 Education subscription, customer data may be stored at rest
                 anywhere within Europe or North America</li>
-              <li><strong>Canvas LMS</strong> (course delivery) — operated by Instructure Inc.,
+              <li><strong>Canvas LMS</strong> (course delivery) - operated by Instructure Inc.,
                 primarily in the United States</li>
-              <li><strong>Vercel</strong> (website hosting) — global edge network with
+              <li><strong>Vercel</strong> (website hosting) - global edge network with
                 Australian region preferred</li>
             </ul>
             <p>
@@ -185,7 +185,7 @@ export default function PrivacyPolicy() {
               >
                 info@holainternationalcollege.com.au
               </a>{" "}
-              — we will investigate and respond within 30 days.
+              - we will investigate and respond within 30 days.
             </p>
             <p>
               If you are not satisfied with our response, you may lodge a complaint with the{" "}

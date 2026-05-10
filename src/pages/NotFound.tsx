@@ -3,7 +3,7 @@ import { Compass } from "lucide-react";
 import { usePageMeta } from "../hooks/usePageMeta";
 
 export default function NotFound() {
-  usePageMeta("Page not found — Hola International College");
+  usePageMeta("Page not found - Hola International College");
   return (
     <section className="flex min-h-[60vh] items-center justify-center bg-gray-50 px-4 py-20">
       <div className="w-full max-w-md rounded-2xl bg-white p-10 text-center shadow-lg">

@@ -15,8 +15,8 @@ const subjects = [
 
 export default function Contact() {
   usePageMeta(
-    "Contact Us — Elizabeth South, Adelaide | Hola International College",
-    "Contact Hola International College — visit us at 179B Philip Hwy, Elizabeth South SA 5112, call +61 466 331 055, or email info@holainternationalcollege.com.au. International student enquiries welcome."
+    "Contact Us - Elizabeth South, Adelaide | Hola International College",
+    "Contact Hola International College - visit us at 179B Philip Hwy, Elizabeth South SA 5112, call +61 466 331 055, or email info@holainternationalcollege.com.au. International student enquiries welcome."
   );
 
   useStructuredData(
@@ -36,7 +36,7 @@ export default function Contact() {
     const form = e.target as HTMLFormElement;
     const data = Object.fromEntries(new FormData(form).entries());
 
-    // Honeypot — bots usually fill all fields including hidden ones
+    // Honeypot - bots usually fill all fields including hidden ones
     if (data._honey) {
       setSubmitting(false);
       setStatus("ok"); // pretend success to bots
@@ -132,7 +132,7 @@ export default function Contact() {
                   />
                 </Field>
 
-                {/* Honeypot — hidden from users, bots fill it and we drop them */}
+                {/* Honeypot - hidden from users, bots fill it and we drop them */}
                 <input
                   type="text"
                   name="_honey"

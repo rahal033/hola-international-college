@@ -24,25 +24,25 @@ const features = [
     n: "01",
     eyebrow: "Recognition",
     title: "Nationally recognised under the AQF",
-    body: "All our qualifications sit under the Australian Qualifications Framework. Your CHC certificate from Hola is the same legal document recognised by aged-care and disability employers Australia-wide — Adelaide, Sydney, Perth, anywhere.",
+    body: "All our qualifications sit under the Australian Qualifications Framework. Your CHC certificate from Hola is the same legal document recognised by aged-care and disability employers Australia-wide - Adelaide, Sydney, Perth, anywhere.",
   },
   {
     n: "02",
     eyebrow: "Cadence",
     title: "Monthly intakes, no academic calendar",
-    body: "We don't make you wait until February or July. Full-time, part-time and blended delivery, with a fresh cohort starting every single month — so the right time to enrol is when life is ready, not when the calendar permits it.",
+    body: "We don't make you wait until February or July. Full-time, part-time and blended delivery, with a fresh cohort starting every single month - so the right time to enrol is when life is ready, not when the calendar permits it.",
   },
   {
     n: "03",
     eyebrow: "Practitioners",
     title: "Trainers from the floor, not the textbook",
-    body: "Our trainers are registered nurses, support coordinators, disability advocates and aged-care veterans who still work the sector. You'll learn how the work is actually done — including the parts the textbook leaves out.",
+    body: "Our trainers are registered nurses, support coordinators, disability advocates and aged-care veterans who still work the sector. You'll learn how the work is actually done - including the parts the textbook leaves out.",
   },
   {
     n: "04",
     eyebrow: "Placement",
     title: "Real placements with South Australian providers",
-    body: "We partner with aged-care residences, NDIS providers and community organisations across metropolitan Adelaide and the northern suburbs. Your placement hours happen with people, in real settings — counting toward your qualification and your résumé from day one.",
+    body: "We partner with aged-care residences, NDIS providers and community organisations across metropolitan Adelaide and the northern suburbs. Your placement hours happen with people, in real settings - counting toward your qualification and your résumé from day one.",
   },
 ];
 
@@ -56,7 +56,7 @@ const homeCourses = [
 
 export default function Home() {
   usePageMeta(
-    "Hola International College — Aged Care, Disability & Community Services Training in Adelaide",
+    "Hola International College - Aged Care, Disability & Community Services Training in Adelaide",
     "Hola International College in Elizabeth South, Adelaide delivers nationally recognised CHC qualifications in aged care (CHC33021), disability support, community services (CHC52021) and first aid (HLTAID011). Monthly intakes, real placements across South Australia."
   );
 
@@ -64,7 +64,7 @@ export default function Home() {
 
   return (
     <>
-      {/* HERO — editorial split, oversized serif headline */}
+      {/* HERO - editorial split, oversized serif headline */}
       <section className="relative overflow-hidden bg-gradient-to-br from-forest-700 via-forest-800 to-forest-900 text-white">
         <div className="absolute inset-0 opacity-10" aria-hidden>
           <div className="absolute -left-20 -top-20 h-96 w-96 rounded-full bg-white blur-3xl" />
@@ -145,7 +145,7 @@ export default function Home() {
 
       </section>
 
-      {/* STATS — paper background, serif numerals, divider rules */}
+      {/* STATS - paper background, serif numerals, divider rules */}
       <section className="bg-paper">
         <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
           <div className="mb-8 flex items-baseline justify-between">
@@ -207,7 +207,7 @@ export default function Home() {
               </h2>
             </div>
             <p className="text-base leading-relaxed text-gray-600 md:text-right">
-              Aged care, disability support, community services and first aid — every
+              Aged care, disability support, community services and first aid - every
               one nationally recognised, every one delivered in Elizabeth South.
             </p>
           </motion.div>
@@ -272,7 +272,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHY HOLA — editorial alternating rows */}
+      {/* WHY HOLA - editorial alternating rows */}
       <section className="bg-paper py-20 sm:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -342,7 +342,7 @@ export default function Home() {
               logistics in Adelaide.
             </p>
             <p className="mt-3 text-sm italic text-gray-500">
-              CRICOS provider code coming soon — registration in progress.
+              CRICOS provider code coming soon - registration in progress.
             </p>
             <div className="mt-8">
               <a

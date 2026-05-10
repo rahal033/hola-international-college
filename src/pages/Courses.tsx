@@ -80,7 +80,7 @@ const categories: { name: string; color: string; courses: Course[] }[] = [
 
 export default function Courses() {
   usePageMeta(
-    "Courses — CHC33021, CHC52021, HLTAID011 | Hola International College Adelaide",
+    "Courses - CHC33021, CHC52021, HLTAID011 | Hola International College Adelaide",
     "Nationally recognised CHC33021 Individual Support (Ageing & Disability), CHC52021 Diploma of Community Services, HLTAID011 First Aid + CPR and medication training. Full-time, part-time and face-to-face study in Elizabeth South, Adelaide SA."
   );
 
@@ -92,7 +92,7 @@ export default function Courses() {
       description: c.description,
       courseCode: c.code,
       educationalCredentialAwarded: c.code.startsWith("CHC")
-        ? `Certificate / Diploma — ${c.code}`
+        ? `Certificate / Diploma - ${c.code}`
         : c.code === "HLTAID011 / HLTAID009"
         ? "First Aid Statement of Attainment"
         : "Statement of Attainment",
@@ -141,7 +141,7 @@ export default function Courses() {
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-forest-100">
             Nationally recognised CHC qualifications and skill sets in aged care,
-            disability support, community services and first aid — all delivered from
+            disability support, community services and first aid - all delivered from
             Elizabeth South, South Australia.
           </p>
         </div>

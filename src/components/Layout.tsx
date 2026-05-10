@@ -148,7 +148,7 @@ export default function Layout() {
             </p>
             <div className="mt-5">
               <div className="mb-2 text-[11px] font-medium uppercase tracking-[0.18em] text-forest-100/60">
-                Social — coming soon
+                Social - coming soon
               </div>
               <div className="flex gap-2.5 text-sm font-bold opacity-50" aria-label="Social media accounts coming soon">
                 <span title="Facebook page coming soon" className="flex h-9 w-9 items-center justify-center rounded-full bg-forest-800 text-forest-100/70 ring-1 ring-forest-100/10">

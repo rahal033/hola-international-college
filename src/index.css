@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 html {
-  /* Lenis takes over smooth scrolling — disable native */
+  /* Lenis takes over smooth scrolling - disable native */
   scroll-behavior: auto;
   font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -48,7 +48,7 @@ html.lenis body {
   pointer-events: none;
 }
 
-/* Display serif tuning — Fraunces likes higher optical size on big headings */
+/* Display serif tuning - Fraunces likes higher optical size on big headings */
 .font-display {
   font-family: "Fraunces", ui-serif, Georgia, Cambria, "Times New Roman", serif;
   font-optical-sizing: auto;

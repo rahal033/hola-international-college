@@ -27,8 +27,8 @@ const values = [
 
 export default function Vision() {
   usePageMeta(
-    "About Us — Vision, Mission, Values | Hola International College Adelaide",
-    "Our vision, mission and the four values that drive Hola International College — an Australian RTO based in Elizabeth South delivering aged care, disability and community services training."
+    "About Us - Vision, Mission, Values | Hola International College Adelaide",
+    "Our vision, mission and the four values that drive Hola International College - an Australian RTO based in Elizabeth South delivering aged care, disability and community services training."
   );
 
   useStructuredData(
@@ -58,7 +58,7 @@ export default function Vision() {
             <h2 className="text-2xl font-bold sm:text-3xl">Our Vision</h2>
             <p className="mt-4 text-base leading-relaxed text-forest-50 sm:text-lg">
               To be the leading RTO recognised for excellence in health, aged care, and
-              community services education — empowering a new generation of compassionate,
+              community services education - empowering a new generation of compassionate,
               confident professionals who transform lives in their communities.
             </p>
           </div>
@@ -67,7 +67,7 @@ export default function Vision() {
             <h2 className="text-2xl font-bold sm:text-3xl">Our Mission</h2>
             <p className="mt-4 text-base leading-relaxed text-emerald-50 sm:text-lg">
               To deliver exceptional, person-centered training programs that combine
-              practical skill, ethical practice and genuine care — preparing every student
+              practical skill, ethical practice and genuine care - preparing every student
               with the qualifications, confidence and pathways to build a meaningful career.
             </p>
           </div>
