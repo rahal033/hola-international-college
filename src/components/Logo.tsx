@@ -19,12 +19,12 @@ export default function Logo({
   const colors = (() => {
     switch (variant) {
       case "reverse":
-        return { stroke: "#FFFFFF", dot: "#E8C896", arc: "#FFFFFF", arcOpacity: 0.85 };
+        return { stroke: "#FFFFFF", dot: "#FACDB0", arc: "#FFFFFF", arcOpacity: 0.85 };
       case "mono":
         return { stroke: "currentColor", dot: "currentColor", arc: "currentColor", arcOpacity: 0.7 };
       case "color":
       default:
-        return { stroke: "#1F5A3D", dot: "#D4A574", arc: "#1F5A3D", arcOpacity: 0.85 };
+        return { stroke: "#B23A2C", dot: "#E8A87C", arc: "#B23A2C", arcOpacity: 0.85 };
     }
   })();
 
