@@ -139,13 +139,15 @@ export default function FAQ() {
 
   return (
     <>
-      <section className="bg-gradient-to-br from-forest-700 to-forest-900 py-16 text-white sm:py-20">
+      <section className="bg-gradient-to-br from-forest-700 to-forest-900 py-20 text-white sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-            Frequently Asked Questions
+          <p className="mb-3 font-display text-sm uppercase tracking-[0.22em] text-tan-300">FAQ</p>
+          <h1 className="font-display text-5xl font-light leading-[1.05] tracking-tight sm:text-6xl">
+            Questions, <span className="italic text-tan-300">answered.</span>
           </h1>
-          <p className="mt-4 max-w-2xl text-lg text-forest-100">
-            Answers to the questions our students and applicants ask most often.
+          <p className="mt-6 max-w-2xl text-lg text-forest-100">
+            Everything our students and applicants ask most often — admissions, fees,
+            study modes, recognition, pathways.
           </p>
         </div>
       </section>

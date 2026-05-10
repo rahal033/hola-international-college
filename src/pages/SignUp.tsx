@@ -87,12 +87,15 @@ export default function SignUp() {
 
   return (
     <>
-      <section className="bg-gradient-to-br from-forest-700 to-forest-900 py-16 text-white sm:py-20">
+      <section className="bg-gradient-to-br from-forest-700 to-forest-900 py-20 text-white sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Apply Now</h1>
-          <p className="mt-4 max-w-2xl text-lg text-forest-100">
-            Take the first step. Complete the application form below and our admissions
-            team will be in touch within 2 business days.
+          <p className="mb-3 font-display text-sm uppercase tracking-[0.22em] text-tan-300">Apply</p>
+          <h1 className="font-display text-5xl font-light leading-[1.05] tracking-tight sm:text-6xl">
+            Take the <span className="italic text-tan-300">first step.</span>
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg text-forest-100">
+            Complete the application below — our admissions team will be in touch within
+            2 business days to confirm details and walk you through next steps.
           </p>
         </div>
       </section>
