@@ -54,20 +54,6 @@ const homeCourses = [
   { code: "Skill Set", title: "Medication Training", duration: "1–2 days" },
 ];
 
-// Marquee strip — concatenated twice for seamless loop
-const marqueeKeywords = [
-  "Aged Care",
-  "Disability Support",
-  "Community Services",
-  "First Aid",
-  "Medication Training",
-  "CHC33021",
-  "CHC52021",
-  "HLTAID011",
-  "AQF Aligned",
-  "Adelaide RTO",
-];
-
 export default function Home() {
   usePageMeta(
     "Hola International College — Aged Care, Disability & Community Services Training in Adelaide",
@@ -157,22 +143,6 @@ export default function Home() {
           </motion.div>
         </div>
 
-        {/* Keyword marquee — flush against the hero base */}
-        <div className="relative border-t border-white/10 bg-forest-900/60 backdrop-blur">
-          <div className="overflow-hidden py-4">
-            <div className="animate-marquee inline-flex whitespace-nowrap">
-              {[...marqueeKeywords, ...marqueeKeywords, ...marqueeKeywords].map((k, i) => (
-                <span
-                  key={`${k}-${i}`}
-                  className="mx-6 inline-flex items-center gap-3 font-display text-xl italic text-tan-300/70 sm:text-2xl"
-                >
-                  {k}
-                  <span className="text-tan-300/30">·</span>
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* STATS — paper background, serif numerals, divider rules */}
