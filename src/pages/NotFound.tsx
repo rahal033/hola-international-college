@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Compass } from "lucide-react";
+import { Compass } from "../components/icons";
 import { usePageMeta } from "../hooks/usePageMeta";
 
 export default function NotFound() {

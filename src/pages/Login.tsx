@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ExternalLink, GraduationCap, BookOpen, ShieldCheck } from "lucide-react";
+import { ExternalLink, GraduationCap, BookOpen, ShieldCheck } from "../components/icons";
 import { usePageMeta } from "../hooks/usePageMeta";
 import Logo from "../components/Logo";
 

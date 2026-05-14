@@ -6,10 +6,13 @@ import {
   MessageCircle,
   Sparkles,
   ArrowUpRight,
-} from "lucide-react";
+} from "../components/icons";
 import { motion } from "motion/react";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { useStructuredData, buildBreadcrumb } from "../hooks/useStructuredData";
+import SplitText from "../components/SplitText";
+import Counter from "../components/Counter";
+import MagneticButton from "../components/MagneticButton";
 
 const stats = [
   { value: "5", label: "Nationally recognised courses" },
@@ -90,13 +93,15 @@ export default function Home() {
             </div>
 
             <h1 className="font-display text-[2.75rem] font-light leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl">
-              Train for a career in{" "}
+              <SplitText text="Train for a career in " by="word" stagger={0.06} />
               <span className="italic text-tan-300" style={{ fontVariationSettings: '"opsz" 144, "SOFT" 100' }}>
-                care
+                <SplitText text="care" by="char" stagger={0.05} delay={0.45} />
               </span>
-              ,
+              <span aria-hidden>,</span>
               <br />
-              <span className="text-forest-100">in Adelaide.</span>
+              <span className="text-forest-100">
+                <SplitText text="in Adelaide." by="word" stagger={0.08} delay={0.7} />
+              </span>
             </h1>
 
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-forest-100 sm:text-xl">
@@ -112,19 +117,23 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
             >
-              <Link
-                to="/signup"
-                className="group inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-base font-semibold text-forest-700 shadow-lg shadow-forest-900/40 transition hover:shadow-xl hover:shadow-forest-900/60"
-              >
-                Apply Now
-                <ArrowRight size={18} className="transition-transform duration-200 group-hover:translate-x-1" />
-              </Link>
-              <a
-                href="mailto:info@holainternationalcollege.com.au?subject=Course%20advice"
-                className="group inline-flex items-center gap-2 rounded-full bg-tan-300 px-7 py-3.5 text-base font-semibold text-forest-900 shadow-lg shadow-forest-900/40 transition hover:bg-tan-200 hover:shadow-xl"
-              >
-                <MessageCircle size={18} /> Talk to a course advisor
-              </a>
+              <MagneticButton strength={0.3}>
+                <Link
+                  to="/signup"
+                  className="group inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-base font-semibold text-forest-700 shadow-lg shadow-forest-900/40 transition hover:shadow-xl hover:shadow-forest-900/60"
+                >
+                  Apply Now
+                  <ArrowRight size={18} className="transition-transform duration-200 group-hover:translate-x-1" />
+                </Link>
+              </MagneticButton>
+              <MagneticButton strength={0.3}>
+                <a
+                  href="mailto:info@holainternationalcollege.com.au?subject=Course%20advice"
+                  className="group inline-flex items-center gap-2 rounded-full bg-tan-300 px-7 py-3.5 text-base font-semibold text-forest-900 shadow-lg shadow-forest-900/40 transition hover:bg-tan-200 hover:shadow-xl"
+                >
+                  <MessageCircle size={18} /> Talk to a course advisor
+                </a>
+              </MagneticButton>
               <Link
                 to="/courses"
                 className="group inline-flex items-center gap-2 rounded-full border border-white/30 px-7 py-3.5 text-base font-semibold text-white transition hover:bg-white/10"
@@ -170,7 +179,11 @@ export default function Home() {
                 className="border-l border-forest-700/20 pl-5 sm:pl-6"
               >
                 <div className="font-display text-5xl font-light leading-none text-forest-700 sm:text-6xl">
-                  {s.value}
+                  {Number.isFinite(Number(s.value)) ? (
+                    <Counter to={Number(s.value)} duration={1.4} />
+                  ) : (
+                    s.value
+                  )}
                 </div>
                 <div className="mt-3 text-sm font-medium leading-snug text-forest-900/70 sm:text-base">
                   {s.label}

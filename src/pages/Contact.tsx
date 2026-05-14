@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { FormEvent } from "react";
-import { MapPin, Phone, Mail, Clock, Globe } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Globe } from "../components/icons";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { useStructuredData, buildBreadcrumb } from "../hooks/useStructuredData";
 

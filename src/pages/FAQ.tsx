@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown } from "../components/icons";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { useStructuredData, buildBreadcrumb } from "../hooks/useStructuredData";
 

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Clock, BookOpen, ArrowRight } from "lucide-react";
+import { Clock, BookOpen, ArrowRight } from "../components/icons";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { useStructuredData, buildBreadcrumb } from "../hooks/useStructuredData";
 

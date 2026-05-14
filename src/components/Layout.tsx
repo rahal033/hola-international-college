@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Link, NavLink, Outlet } from "react-router-dom";
-import { Menu, X, MapPin, Phone, Mail } from "lucide-react";
+import { Menu, X, MapPin, Phone, Mail } from "./icons";
 import Logo from "./Logo";
 import SmoothScroll from "./SmoothScroll";
+import CustomCursor from "./CustomCursor";
+import PageTransition from "./PageTransition";
 
 const navItems = [
   { to: "/", label: "Home", end: true },
@@ -19,6 +21,7 @@ export default function Layout() {
   return (
     <div className="flex min-h-screen flex-col bg-white text-ink">
       <SmoothScroll />
+      <CustomCursor />
       <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
           <Link to="/" className="flex items-center gap-3">
@@ -119,7 +122,9 @@ export default function Layout() {
       </header>
 
       <main className="flex-1">
-        <Outlet />
+        <PageTransition>
+          <Outlet />
+        </PageTransition>
       </main>
 
       <footer className="border-t border-forest-800 bg-forest-900 text-gray-300">

@@ -1,4 +1,4 @@
-import { Heart, TrendingUp, Users, Coffee, MapPin, ArrowRight } from "lucide-react";
+import { Heart, TrendingUp, Users, Coffee, MapPin, ArrowRight } from "../components/icons";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { useStructuredData, buildBreadcrumb } from "../hooks/useStructuredData";
 
