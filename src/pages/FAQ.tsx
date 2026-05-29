@@ -55,15 +55,15 @@ const categories: FaqCategory[] = [
       },
       {
         q: "How does online learning work?",
-        a: "All online learning is delivered through Canvas LMS. You can access learning materials, assessments and trainer support 24/7, with scheduled live sessions each week.",
+        a: "All online learning is delivered through our Learning Portal. You can access learning materials, assessments and trainer support 24/7, with scheduled live sessions each week. The platform we use is being finalised - details confirmed at enrolment.",
       },
       {
         q: "What student support is available?",
         a: "Every student is assigned a dedicated Student Support Officer. We also provide academic support, language and literacy support, careers advice and mental wellbeing referrals.",
       },
       {
-        q: "How do I access Canvas LMS?",
-        a: "Once enrolled, you'll receive a Canvas login. You can also access Canvas from the Login page on this site.",
+        q: "How do I access the Learning Portal?",
+        a: "Once enrolled, you'll receive login details for the Learning Portal by email. You'll also be able to sign in from the Login page on this site as soon as your account is provisioned.",
       },
     ],
   },

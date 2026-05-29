@@ -72,7 +72,7 @@ export default function PrivacyPolicy() {
               <li>Online application and contact forms on this website</li>
               <li>Email, phone and in-person enquiries</li>
               <li>Enrolment paperwork and supporting documentation you provide</li>
-              <li>Assessment submissions and Canvas LMS activity once enrolled</li>
+              <li>Assessment submissions and Learning Portal activity once enrolled</li>
               <li>Placement supervisor reports during work-based learning</li>
             </ul>
             <p>
@@ -111,7 +111,7 @@ export default function PrivacyPolicy() {
               <li><strong>Placement employers</strong> when you undertake work-based learning,
                 and only the information necessary for that placement</li>
               <li><strong>Service providers</strong> we engage to operate our infrastructure
-                (e.g. Microsoft 365 for email, Vercel for website hosting, Canvas LMS for
+                (e.g. Microsoft 365 for email, Vercel for website hosting, Learning Portal platform for
                 course delivery)</li>
               <li>Law enforcement or courts where required by law</li>
             </ul>
@@ -129,8 +129,9 @@ export default function PrivacyPolicy() {
               <li><strong>Microsoft 365</strong> (email, file storage, Teams) - under our
                 Microsoft 365 Education subscription, customer data may be stored at rest
                 anywhere within Europe or North America</li>
-              <li><strong>Canvas LMS</strong> (course delivery) - operated by Instructure Inc.,
-                primarily in the United States</li>
+              <li><strong>Learning Portal</strong> (course delivery) - platform under
+                evaluation; we will publish the chosen vendor and its data residency
+                in this Policy before any student data is processed</li>
               <li><strong>Vercel</strong> (website hosting) - global edge network with
                 Australian region preferred</li>
             </ul>
