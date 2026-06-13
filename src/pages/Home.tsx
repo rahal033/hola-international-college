@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
-  MapPin,
   Phone,
   ArrowUpRight,
 } from "../components/icons";
@@ -62,12 +61,6 @@ export default function Home() {
       <section className="bg-gradient-to-br from-forest-700 via-forest-800 to-forest-900 text-white">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-32">
           <div className="max-w-3xl">
-            <div className="mb-6">
-              <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-sm font-medium text-forest-100 ring-1 ring-white/20">
-                <MapPin size={14} className="text-forest-100" /> Elizabeth South, Adelaide SA
-              </span>
-            </div>
-
             <h1 className="font-display text-[2.5rem] font-light leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
               Train for a career in care, in Adelaide.
             </h1>
