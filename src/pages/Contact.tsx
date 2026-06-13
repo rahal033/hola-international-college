@@ -45,19 +45,11 @@ export default function Contact() {
     }
 
     try {
-      const res = await fetch(
-        "https://formsubmit.co/ajax/info@holainternationalcollege.com.au",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json", Accept: "application/json" },
-          body: JSON.stringify({
-            ...data,
-            _subject: `Website contact: ${data.subject || "General"}`,
-            _template: "table",
-            _captcha: "false",
-          }),
-        }
-      );
+      const res = await fetch("/api/lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(data),
+      });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       setStatus("ok");
       form.reset();
