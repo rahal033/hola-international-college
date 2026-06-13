@@ -5,7 +5,7 @@ import {
   submitCourseEnquiry,
   lookupCourse,
   sendFormsubmitFallback,
-} from "./_axcelerate";
+} from "./_axcelerate.js";
 
 /**
  * Handles submissions from the website /signup (application) form.

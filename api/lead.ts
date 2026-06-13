@@ -4,7 +4,7 @@ import {
   findOrCreateContact,
   submitCourseEnquiry,
   sendFormsubmitFallback,
-} from "./_axcelerate";
+} from "./_axcelerate.js";
 
 /**
  * Handles submissions from the website /contact form.
