@@ -237,10 +237,22 @@ export async function sendFormsubmitFallback(
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
+        // Formsubmit's bot-detection rejects server-to-server requests
+        // without an Origin/Referer. We satisfy it with the production host.
+        Origin: "https://www.holainternationalcollege.com.au",
+        Referer: "https://www.holainternationalcollege.com.au/",
+        "User-Agent": "Mozilla/5.0 (compatible; HolaCollegeServer/1.0)",
       },
       body: JSON.stringify(body),
     });
-    return res.ok;
+    if (!res.ok) return false;
+    // Formsubmit returns 200 with {"success":"false"} on errors instead of HTTP errors
+    try {
+      const json = (await res.json()) as { success?: string | boolean };
+      return json.success === true || json.success === "true";
+    } catch {
+      return true; // body wasn't JSON but HTTP was OK
+    }
   } catch {
     return false;
   }
