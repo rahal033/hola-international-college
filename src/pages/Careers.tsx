@@ -131,14 +131,13 @@ export default function Careers() {
               >
                 <div className="flex flex-wrap items-start justify-between gap-4">
                   <div className="min-w-0 flex-1">
-                    <div className="mb-2 flex flex-wrap items-center gap-2">
-                      <h3 className="text-xl font-semibold text-gray-900">{j.title}</h3>
-                      <span className="rounded-full bg-forest-100 px-3 py-1 text-xs font-semibold text-forest-700">
-                        {j.department}
+                    <h3 className="mb-2 text-xl font-semibold text-gray-900">{j.title}</h3>
+                    <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-600">
+                      <span className="flex items-center gap-1.5">
+                        <MapPin size={14} className="text-forest-600" /> {j.location}
                       </span>
-                    </div>
-                    <div className="flex items-center gap-1.5 text-sm text-gray-600">
-                      <MapPin size={14} className="text-forest-600" /> {j.location}
+                      <span className="text-gray-400">·</span>
+                      <span>{j.department}</span>
                     </div>
                     <p className="mt-3 text-sm leading-relaxed text-gray-600">{j.description}</p>
                   </div>

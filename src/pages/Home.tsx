@@ -237,11 +237,11 @@ export default function Home() {
                   to="/courses"
                   className="group flex h-full items-start gap-4 rounded-2xl border border-gray-200 bg-white p-6 transition hover:-translate-y-1 hover:border-forest-300 hover:shadow-xl hover:shadow-forest-900/5"
                 >
-                  <span className="mt-0.5 inline-flex shrink-0 items-center justify-center rounded-md bg-forest-100 px-2.5 py-1 text-xs font-semibold tracking-wide text-forest-700 transition group-hover:bg-forest-600 group-hover:text-white">
-                    {c.code}
-                  </span>
                   <div className="min-w-0 flex-1">
-                    <h3 className="font-medium leading-snug text-gray-900 transition group-hover:text-forest-700">
+                    <p className="text-xs font-medium uppercase tracking-[0.18em] text-forest-700/70">
+                      {c.code}
+                    </p>
+                    <h3 className="mt-1.5 font-medium leading-snug text-gray-900 transition group-hover:text-forest-700">
                       {c.title}
                     </h3>
                     <p className="mt-1.5 text-xs uppercase tracking-wider text-gray-400">

@@ -12,10 +12,9 @@ type Course = {
   description: string;
 };
 
-const categories: { name: string; color: string; courses: Course[] }[] = [
+const categories: { name: string; courses: Course[] }[] = [
   {
     name: "Health & Community Services",
-    color: "bg-forest-100 text-forest-700",
     courses: [
       {
         category: "Health & Community Services",
@@ -48,7 +47,6 @@ const categories: { name: string; color: string; courses: Course[] }[] = [
   },
   {
     name: "First Aid & Emergency Care",
-    color: "bg-red-100 text-red-700",
     courses: [
       {
         category: "First Aid & Emergency Care",
@@ -63,7 +61,6 @@ const categories: { name: string; color: string; courses: Course[] }[] = [
   },
   {
     name: "Medication & Clinical Skills",
-    color: "bg-green-100 text-green-700",
     courses: [
       {
         category: "Medication & Clinical Skills",
@@ -158,11 +155,6 @@ export default function Courses() {
                     key={c.title}
                     className="flex flex-col rounded-xl bg-white p-6 shadow-sm transition hover:shadow-md"
                   >
-                    <span
-                      className={`mb-3 inline-block w-fit rounded-full px-3 py-1 text-xs font-semibold ${cat.color}`}
-                    >
-                      {cat.name}
-                    </span>
                     <h3 className="text-xl font-semibold text-gray-900">{c.title}</h3>
                     <div className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-600">
                       <span className="inline-flex items-center gap-1.5">
