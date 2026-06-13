@@ -48,99 +48,10 @@ html.lenis body {
   pointer-events: none;
 }
 
-/* Display serif tuning - Fraunces likes higher optical size on big headings */
+/* Display serif - restrained Fraunces tuning for institutional feel */
 .font-display {
   font-family: "Fraunces", ui-serif, Georgia, Cambria, "Times New Roman", serif;
   font-optical-sizing: auto;
-  font-variation-settings: "opsz" 144, "SOFT" 50;
-  letter-spacing: -0.02em;
+  font-variation-settings: "opsz" 96, "SOFT" 20;
+  letter-spacing: -0.01em;
 }
-
-.font-display-tight {
-  font-family: "Fraunces", ui-serif, Georgia, serif;
-  font-optical-sizing: auto;
-  font-variation-settings: "opsz" 72, "SOFT" 30;
-  letter-spacing: -0.025em;
-}
-
-/* Aurora-style background blobs - slow, drifting, hero only */
-@keyframes blob-a {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33%      { transform: translate(40px, 20px) scale(1.08); }
-  66%      { transform: translate(-20px, 40px) scale(0.95); }
-}
-@keyframes blob-b {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33%      { transform: translate(-50px, 30px) scale(0.92); }
-  66%      { transform: translate(30px, -20px) scale(1.06); }
-}
-@keyframes blob-c {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33%      { transform: translate(30px, -40px) scale(1.05); }
-  66%      { transform: translate(-40px, 20px) scale(0.98); }
-}
-@keyframes blob-d {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33%      { transform: translate(-20px, -30px) scale(1.1); }
-  66%      { transform: translate(30px, 20px) scale(0.94); }
-}
-
-.animate-blob-a { animation: blob-a 22s ease-in-out infinite; }
-.animate-blob-b { animation: blob-b 26s ease-in-out infinite; }
-.animate-blob-c { animation: blob-c 30s ease-in-out infinite; }
-.animate-blob-d { animation: blob-d 18s ease-in-out infinite; }
-
-@media (prefers-reduced-motion: reduce) {
-  .animate-blob-a,
-  .animate-blob-b,
-  .animate-blob-c,
-  .animate-blob-d {
-    animation: none;
-  }
-}
-
-/* Editorial typography flourishes
-   ------------------------------------------------------------- */
-
-/* Drop cap - opt in with className="drop-cap" on a paragraph */
-.drop-cap::first-letter {
-  font-family: "Fraunces", ui-serif, Georgia, serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 4.2em;
-  line-height: 0.85;
-  float: left;
-  margin: 0.05em 0.12em -0.05em 0;
-  color: #5B2A4A;
-  font-variation-settings: "opsz" 144, "SOFT" 100;
-}
-
-/* Hanging punctuation - quotes hang outside the text block edge */
-.hang-punct {
-  hanging-punctuation: first last;
-}
-
-/* Optical alignment for headlines that start with quote marks */
-.optical-quote {
-  text-indent: -0.42em;
-}
-
-/* Editorial number indices - small caps style */
-.editorial-index {
-  font-family: "Fraunces", ui-serif, serif;
-  font-style: italic;
-  font-feature-settings: "lnum", "tnum";
-  letter-spacing: 0.04em;
-}
-
-/* Hide the default browser cursor when CustomCursor is mounted on
-   pointer-fine devices - leaves touch alone. We keep the default
-   cursor for accessibility (keyboard users, etc.) by using a soft
-   approach: only hide it on links/buttons where the custom cursor
-   provides the visible affordance. */
-@media (pointer: fine) and (prefers-reduced-motion: no-preference) {
-  /* opt-in via className="cursor-soft" if you want to soften native
-     cursor on a region. We are NOT hiding it globally to preserve
-     accessibility. */
-}
-

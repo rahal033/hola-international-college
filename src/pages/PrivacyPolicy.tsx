@@ -19,16 +19,15 @@ export default function PrivacyPolicy() {
 
   return (
     <>
-      <section className="bg-gradient-to-br from-forest-700 to-forest-900 py-20 text-white sm:py-28">
+      <section className="bg-gradient-to-br from-forest-700 to-forest-900 py-20 text-white sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="mb-3 font-display text-sm uppercase tracking-[0.22em] text-tan-300">Legal</p>
-          <h1 className="font-display text-5xl font-light leading-[1.05] tracking-tight sm:text-6xl">
-            Privacy <span className="italic text-tan-300">Policy.</span>
+          <h1 className="font-display text-4xl font-light leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+            Privacy policy
           </h1>
-          <p className="mt-6 max-w-2xl text-lg text-forest-100">
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-forest-100 sm:text-xl">
             How we collect, use, store and protect your personal information.
           </p>
-          <p className="mt-3 text-sm text-tan-300/80">Last updated: {lastUpdated}</p>
+          <p className="mt-3 text-sm text-forest-100/70">Last updated: {lastUpdated}</p>
         </div>
       </section>
 
