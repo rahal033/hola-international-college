@@ -4,7 +4,6 @@ import {
   MapPin,
   Phone,
   MessageCircle,
-  Sparkles,
   ArrowUpRight,
 } from "../components/icons";
 import { motion } from "motion/react";
@@ -86,9 +85,6 @@ export default function Home() {
             <div className="mb-6 flex flex-wrap items-center gap-2">
               <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-sm font-medium text-forest-100 ring-1 ring-white/20">
                 <MapPin size={14} className="text-tan-300" /> Elizabeth South, Adelaide SA
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-tan-300/20 px-4 py-1 text-sm font-medium text-tan-300 ring-1 ring-tan-300/30">
-                <Sparkles size={12} /> Established 2023 · Pty Ltd
               </span>
             </div>
 
