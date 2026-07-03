@@ -57,9 +57,25 @@ export default function Home() {
 
   return (
     <>
-      {/* HERO */}
-      <section className="bg-gradient-to-br from-forest-700 via-forest-800 to-forest-900 text-white">
-        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-32">
+      {/* HERO - ambient background video on desktop, flat gradient on mobile/reduced-motion */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-forest-700 via-forest-800 to-forest-900 text-white">
+        <video
+          className="pointer-events-none absolute inset-0 hidden h-full w-full object-cover motion-reduce:hidden md:block"
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/media/hero-poster.jpg"
+          aria-hidden="true"
+        >
+          <source src="/media/hero.mp4" type="video/mp4" />
+        </video>
+        {/* Plum overlay keeps white text legible over the video */}
+        <div
+          className="absolute inset-0 hidden bg-gradient-to-r from-forest-900/90 via-forest-800/75 to-forest-900/40 md:block"
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-32">
           <div className="max-w-3xl">
             <h1 className="font-display text-[2.5rem] font-light leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
               Train for a career in care, in Adelaide.

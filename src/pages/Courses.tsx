@@ -10,6 +10,8 @@ type Course = {
   duration: string;
   mode: string;
   description: string;
+  image: string;
+  imageAlt: string;
 };
 
 const categories: { name: string; courses: Course[] }[] = [
@@ -24,6 +26,8 @@ const categories: { name: string; courses: Course[] }[] = [
         mode: "Full-time / Part-time",
         description:
           "Build the practical skills to support older Australians to live independently with dignity. Includes mandatory work placement.",
+        image: "/media/ageing.webp",
+        imageAlt: "Warm residential bedroom with plum pillows and afternoon light",
       },
       {
         category: "Health & Community Services",
@@ -33,6 +37,8 @@ const categories: { name: string; courses: Course[] }[] = [
         mode: "Full-time / Part-time",
         description:
           "Person-centered training for aspiring disability support workers, aligned to NDIS practice standards.",
+        image: "/media/disability.webp",
+        imageAlt: "Wheelchair beside a sunlit window in a warm living room",
       },
       {
         category: "Health & Community Services",
@@ -42,6 +48,8 @@ const categories: { name: string; courses: Course[] }[] = [
         mode: "Full-time / Part-time",
         description:
           "A leadership-track qualification for case managers, coordinators and program supervisors across the community sector.",
+        image: "/media/community.webp",
+        imageAlt: "Community centre table with teapot, cups and folded plum blanket",
       },
     ],
   },
@@ -56,6 +64,8 @@ const categories: { name: string; courses: Course[] }[] = [
         mode: "Face-to-face",
         description:
           "Nationally recognised certification covering CPR and the provision of first aid in workplace and community settings.",
+        image: "/media/firstaid.webp",
+        imageAlt: "Red first aid kit with bandaids on a timber table",
       },
     ],
   },
@@ -70,6 +80,8 @@ const categories: { name: string; courses: Course[] }[] = [
         mode: "Face-to-face",
         description:
           "Practical training in safe medication assistance for support workers, aligned with current clinical guidelines.",
+        image: "/media/medication.webp",
+        imageAlt: "Medication blister pack and glass of water on a timber tray",
       },
     ],
   },
@@ -152,8 +164,17 @@ export default function Courses() {
                 {cat.courses.map((c) => (
                   <article
                     key={c.title}
-                    className="flex flex-col rounded-xl bg-white p-6 shadow-sm transition hover:shadow-md"
+                    className="flex flex-col overflow-hidden rounded-xl bg-white shadow-sm transition hover:shadow-md"
                   >
+                    <img
+                      src={c.image}
+                      alt={c.imageAlt}
+                      loading="lazy"
+                      width={1200}
+                      height={800}
+                      className="aspect-[3/2] w-full object-cover"
+                    />
+                    <div className="flex flex-1 flex-col p-6">
                     <h3 className="text-xl font-semibold text-gray-900">{c.title}</h3>
                     <div className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-600">
                       <span className="inline-flex items-center gap-1.5">
@@ -177,6 +198,7 @@ export default function Courses() {
                     >
                       Apply Now <ArrowRight size={16} />
                     </Link>
+                    </div>
                   </article>
                 ))}
               </div>
