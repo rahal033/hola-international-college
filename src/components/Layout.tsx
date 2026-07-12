@@ -225,6 +225,15 @@ export default function Layout() {
         <div className="border-t border-forest-800">
           <div className="mx-auto max-w-7xl px-4 py-6 text-center text-xs text-gray-400 sm:px-6 lg:px-8">
             © {new Date().getFullYear()} Hola International College Pty Ltd. All rights reserved.
+            {" · "}
+            <a
+              href="https://www.telova.com.au"
+              target="_blank"
+              rel="noopener"
+              className="hover:text-white"
+            >
+              Website by Telova
+            </a>
           </div>
         </div>
       </footer>
