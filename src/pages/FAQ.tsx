@@ -89,20 +89,20 @@ const categories: FaqCategory[] = [
 function FaqRow({ item }: { item: FaqItem }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="border-b border-gray-200 last:border-b-0">
+    <div className="border-b border-ink/10 last:border-b-0">
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
         className="flex w-full items-center justify-between gap-4 py-4 text-left"
       >
-        <span className="text-base font-medium text-gray-900">{item.q}</span>
+        <span className="text-base font-medium text-ink">{item.q}</span>
         <ChevronDown
           size={18}
-          className={`flex-shrink-0 text-gray-500 transition-transform ${open ? "rotate-180" : ""}`}
+          className={`flex-shrink-0 text-ink/50 transition-transform ${open ? "rotate-180" : ""}`}
         />
       </button>
       {open && (
-        <p className="pb-4 text-sm leading-relaxed text-gray-600">{item.a}</p>
+        <p className="pb-4 text-sm leading-relaxed text-ink/55">{item.a}</p>
       )}
     </div>
   );
@@ -139,7 +139,7 @@ export default function FAQ() {
 
   return (
     <>
-      <section className="bg-gradient-to-br from-forest-700 to-forest-900 py-20 text-white sm:py-24">
+      <section className="bg-forest-700 py-20 text-white sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="font-display text-4xl font-light leading-tight tracking-tight sm:text-5xl lg:text-6xl">
             Frequently asked questions
@@ -151,10 +151,10 @@ export default function FAQ() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-16 sm:py-20">
+      <section className="bg-paper py-16 sm:py-20">
         <div className="mx-auto max-w-4xl space-y-10 px-4 sm:px-6 lg:px-8">
           {categories.map((cat) => (
-            <div key={cat.name} className="rounded-xl bg-white p-6 shadow-sm sm:p-8">
+            <div key={cat.name} className="rounded-sm bg-white p-6 shadow-sm sm:p-8">
               <h2 className="mb-4 text-xl font-bold text-forest-800 sm:text-2xl">{cat.name}</h2>
               <div>
                 {cat.items.map((it) => (
@@ -167,7 +167,7 @@ export default function FAQ() {
       </section>
 
       <section className="bg-white py-16 sm:py-20">
-        <div className="mx-auto max-w-4xl rounded-2xl bg-forest-700 px-6 py-12 text-center text-white shadow-lg sm:px-12">
+        <div className="mx-auto max-w-4xl rounded-sm bg-forest-700 px-6 py-12 text-center text-white shadow-lg sm:px-12">
           <h2 className="text-3xl font-bold">Still Have Questions?</h2>
           <p className="mx-auto mt-3 max-w-xl text-forest-100">
             Our admissions team is here to help. Get in touch and we'll respond within one
@@ -175,7 +175,7 @@ export default function FAQ() {
           </p>
           <Link
             to="/contact"
-            className="mt-6 inline-flex rounded-lg bg-white px-6 py-3 font-semibold text-forest-700 shadow-md transition hover:bg-forest-50"
+            className="mt-6 inline-flex rounded-sm bg-white px-6 py-3 font-semibold text-forest-700 shadow-md transition hover:bg-forest-50"
           >
             Contact Us
           </Link>

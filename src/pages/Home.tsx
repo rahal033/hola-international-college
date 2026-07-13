@@ -1,13 +1,18 @@
 import { Link } from "react-router-dom";
-import {
-  ArrowRight,
-  Phone,
-  ArrowUpRight,
-} from "../components/icons";
+import { ArrowRight, ArrowUpRight, Phone } from "../components/icons";
 import { motion } from "motion/react";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { useStructuredData, buildBreadcrumb } from "../hooks/useStructuredData";
 import Counter from "../components/Counter";
+
+/* "Settle" - the single site-wide reveal: slower and heavier than a
+   default fade so it reads deliberate. */
+const settle = {
+  initial: { opacity: 0, y: 24 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: "-80px" },
+  transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] as const },
+};
 
 const stats = [
   { value: "5", label: "Nationally recognised courses" },
@@ -40,11 +45,11 @@ const features = [
 ];
 
 const homeCourses = [
-  { code: "CHC33021", title: "Certificate III in Individual Support (Ageing)", duration: "12 months" },
-  { code: "CHC33021", title: "Certificate III in Individual Support (Disability)", duration: "12 months" },
-  { code: "CHC52021", title: "Diploma of Community Services", duration: "18 months" },
-  { code: "HLTAID011", title: "First Aid + CPR", duration: "1 day" },
-  { code: "Skill Set", title: "Medication Training", duration: "1–2 days" },
+  { n: "01", code: "CHC33021", title: "Certificate III in Individual Support (Ageing)", short: "Individual Support (Ageing)", duration: "12 months" },
+  { n: "02", code: "CHC33021", title: "Certificate III in Individual Support (Disability)", short: "Individual Support (Disability)", duration: "12 months" },
+  { n: "03", code: "CHC52021", title: "Diploma of Community Services", short: "Community Services", duration: "18 months" },
+  { n: "04", code: "HLTAID011", title: "First Aid + CPR", short: "First Aid + CPR", duration: "1 day" },
+  { n: "05", code: "Skill set", title: "Medication Training", short: "Medication Training", duration: "1–2 days" },
 ];
 
 export default function Home() {
@@ -57,49 +62,69 @@ export default function Home() {
 
   return (
     <>
-      {/* HERO */}
-      <section className="bg-gradient-to-br from-forest-700 via-forest-800 to-forest-900 text-white">
-        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-32">
-          <div className="max-w-3xl">
-            <h1 className="font-display text-[2.5rem] font-light leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
-              Train for a career in care, in Adelaide.
-            </h1>
-
-            <p className="mt-8 max-w-xl text-lg leading-relaxed text-forest-100 sm:text-xl">
-              Hola International College delivers nationally recognised CHC qualifications
-              in aged care, disability support, community services and first aid. Small
-              cohorts, monthly intakes, real placements with care providers across
-              South Australia.
-            </p>
-
-            <div className="mt-10 flex flex-wrap gap-3">
-              <Link
-                to="/signup"
-                className="inline-flex items-center gap-2 rounded-md bg-white px-6 py-3 text-base font-semibold text-forest-700 transition hover:bg-forest-50"
-              >
-                Apply Now
-                <ArrowRight size={18} />
-              </Link>
-              <Link
-                to="/courses"
-                className="inline-flex items-center gap-2 rounded-md border border-white/40 px-6 py-3 text-base font-semibold text-white transition hover:bg-white/10"
-              >
-                Browse courses
-              </Link>
-              <a
-                href="mailto:info@holainternationalcollege.com.au?subject=Course%20advice"
-                className="inline-flex items-center gap-2 px-2 py-3 text-base font-medium text-white underline-offset-4 hover:underline"
-              >
-                Talk to a course advisor
-                <ArrowUpRight size={16} />
-              </a>
+      {/* HERO - flat plum field, display type, prospectus course index */}
+      <section className="bg-forest-700 text-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="border-t border-white/15 pt-14 sm:pt-20" />
+          <div className="grid grid-cols-1 gap-14 pb-16 sm:pb-20 lg:grid-cols-[minmax(0,1fr)_minmax(0,20rem)] lg:gap-20">
+            <div>
+              <div className="h-0.5 w-12 bg-tan-300" aria-hidden="true" />
+              <h1 className="font-display-xl mt-8 max-w-4xl text-[clamp(3rem,7vw,6.5rem)] font-light leading-[1.02] tracking-[-0.025em]">
+                Train for a career in care, in Adelaide.
+              </h1>
+              <p className="mt-10 max-w-xl text-xl leading-[1.6] text-white/80">
+                Hola International College delivers nationally recognised CHC
+                qualifications in aged care, disability support, community services
+                and first aid. Small cohorts, monthly intakes, real placements with
+                care providers across South Australia.
+              </p>
+              <div className="mt-12 flex flex-wrap items-center gap-8">
+                <Link
+                  to="/signup"
+                  className="inline-flex items-center gap-2 rounded-sm bg-white px-7 py-3.5 text-base font-semibold text-forest-700 transition-colors duration-300 hover:bg-paper"
+                >
+                  Apply Now
+                  <ArrowRight size={18} />
+                </Link>
+                <a
+                  href="mailto:info@holainternationalcollege.com.au?subject=Course%20advice"
+                  className="group inline-flex items-center gap-2 text-base font-medium text-white"
+                >
+                  <span className="border-b border-white/40 pb-0.5 transition-colors duration-300 group-hover:border-white">
+                    Talk to a course advisor
+                  </span>
+                  <ArrowUpRight size={16} />
+                </a>
+              </div>
             </div>
+
+            {/* Prospectus contents - course index */}
+            <nav aria-label="Courses" className="hidden self-end lg:block">
+              <p className="mb-2 text-sm text-white/60">Courses</p>
+              {homeCourses.map((c) => (
+                <Link
+                  key={c.n}
+                  to="/courses"
+                  className="group flex items-baseline gap-4 border-t border-white/15 py-3 transition-colors duration-300 hover:bg-white/5"
+                >
+                  <span className="font-display text-[15px] text-white/50">{c.n}</span>
+                  <span className="flex-1 text-sm text-white/80 transition-colors duration-300 group-hover:text-white">
+                    {c.short}
+                  </span>
+                  <ArrowUpRight
+                    size={14}
+                    className="text-white/30 transition-all duration-300 group-hover:translate-x-1 group-hover:text-white/70"
+                  />
+                </Link>
+              ))}
+            </nav>
           </div>
+          <div className="border-t border-white/15 pb-14 sm:pb-16" />
         </div>
       </section>
 
-      {/* STATS */}
-      <section className="border-b border-gray-200 bg-white">
+      {/* STATS - minor band */}
+      <section className="bg-white">
         <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
           <motion.div
             className="grid grid-cols-2 gap-x-6 gap-y-10 lg:grid-cols-4"
@@ -108,26 +133,26 @@ export default function Home() {
             viewport={{ once: true, margin: "-80px" }}
             variants={{
               hidden: {},
-              show: { transition: { staggerChildren: 0.08 } },
+              show: { transition: { staggerChildren: 0.09 } },
             }}
           >
             {stats.map((s) => (
               <motion.div
                 key={s.label}
                 variants={{
-                  hidden: { opacity: 0, y: 12 },
-                  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+                  hidden: { opacity: 0, y: 24 },
+                  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } },
                 }}
-                className="border-l border-forest-700/20 pl-5 sm:pl-6"
+                className="border-l border-ink/10 pl-5 sm:pl-6"
               >
-                <div className="font-display text-4xl font-light leading-none text-forest-700 sm:text-5xl">
+                <div className="font-display text-[clamp(3.5rem,4.5vw,4.75rem)] font-light leading-none text-forest-700">
                   {Number.isFinite(Number(s.value)) ? (
                     <Counter to={Number(s.value)} duration={1.4} />
                   ) : (
                     s.value
                   )}
                 </div>
-                <div className="mt-3 text-sm font-medium leading-snug text-gray-600 sm:text-base">
+                <div className="mt-3 text-sm font-medium leading-snug text-ink/55 sm:text-base">
                   {s.label}
                 </div>
               </motion.div>
@@ -136,81 +161,81 @@ export default function Home() {
         </div>
       </section>
 
-      {/* COURSES preview */}
-      <section className="bg-white py-20 sm:py-24">
+      {/* COURSES - ledger rows */}
+      <section className="bg-white py-24 sm:py-32 lg:py-36">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-10 grid grid-cols-1 gap-6 md:grid-cols-[2fr_1fr] md:items-end">
-            <h2 className="font-display text-3xl font-light leading-tight text-gray-900 sm:text-4xl">
+          <motion.div {...settle} className="mb-14 max-w-2xl">
+            <h2 className="font-display text-[clamp(2rem,3.5vw,3.25rem)] font-light leading-[1.08] tracking-[-0.015em] text-ink">
               Our courses
             </h2>
-            <p className="text-base leading-relaxed text-gray-600 md:text-right">
-              Five nationally recognised qualifications in aged care, disability support,
-              community services and first aid, delivered in Elizabeth South.
+            <p className="mt-5 max-w-[62ch] text-[1.0625rem] leading-[1.7] text-ink/70">
+              Five nationally recognised qualifications in aged care, disability
+              support, community services and first aid, delivered in Elizabeth South.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <motion.div {...settle}>
             {homeCourses.map((c) => (
               <Link
-                key={c.title}
+                key={c.n}
                 to="/courses"
-                className="group flex h-full items-start gap-4 rounded-lg border border-gray-200 bg-white p-6 transition hover:border-forest-300 hover:shadow-sm"
+                className="group grid grid-cols-[auto_1fr_auto] items-baseline gap-6 border-t border-ink/10 py-5 transition-colors duration-300 hover:bg-paper sm:grid-cols-[3rem_1fr_auto_auto] sm:gap-8"
               >
-                <div className="min-w-0 flex-1">
-                  <p className="text-xs font-medium uppercase tracking-wider text-forest-700/70">
-                    {c.code}
-                  </p>
-                  <h3 className="mt-1.5 font-medium leading-snug text-gray-900 group-hover:text-forest-700">
-                    {c.title}
-                  </h3>
-                  <p className="mt-1.5 text-xs uppercase tracking-wider text-gray-400">
-                    {c.duration}
-                  </p>
-                </div>
-                <ArrowUpRight
+                <span className="font-display text-[15px] text-ink/40">{c.n}</span>
+                <h3 className="font-display text-[1.375rem] font-medium leading-snug text-ink transition-colors duration-300 group-hover:text-forest-600">
+                  {c.title}
+                </h3>
+                <span className="hidden text-[13px] text-ink/50 sm:block">
+                  {c.code} · {c.duration}
+                </span>
+                <ArrowRight
                   size={18}
-                  className="mt-0.5 text-gray-300 transition group-hover:text-forest-700"
+                  className="hidden self-center text-ink/30 transition-all duration-300 group-hover:translate-x-1 group-hover:text-forest-600 sm:block"
                 />
               </Link>
             ))}
-          </div>
+            <div className="border-t border-ink/10" />
+          </motion.div>
 
-          <div className="mt-10 flex justify-center">
+          <motion.div {...settle} className="mt-10">
             <Link
               to="/courses"
-              className="group inline-flex items-center gap-2 text-sm font-semibold text-forest-700 hover:text-forest-900"
+              className="group inline-flex items-center gap-2 text-sm font-semibold text-forest-600 transition-colors duration-300 hover:text-forest-800"
             >
               See full course details
-              <ArrowRight size={16} className="transition group-hover:translate-x-0.5" />
+              <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* WHY HOLA */}
-      <section className="bg-gray-50 py-20 sm:py-24">
+      <section className="bg-paper py-24 sm:py-32 lg:py-36">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-12 max-w-2xl font-display text-3xl font-light leading-tight text-gray-900 sm:text-4xl">
+          <motion.h2
+            {...settle}
+            className="mb-14 max-w-2xl font-display text-[clamp(2rem,3.5vw,3.25rem)] font-light leading-[1.08] tracking-[-0.015em] text-ink"
+          >
             A South Australian RTO built around how care work actually gets done.
-          </h2>
+          </motion.h2>
 
           <div className="space-y-10 sm:space-y-12">
             {features.map((f, i) => (
               <motion.div
                 key={f.n}
-                className="grid grid-cols-1 gap-6 border-t border-gray-200 pt-8 md:grid-cols-[80px_1fr_minmax(0,420px)] md:items-start md:gap-10"
-                initial={{ opacity: 0, y: 16 }}
+                className="grid grid-cols-1 gap-6 border-t border-ink/10 pt-8 md:grid-cols-[80px_1fr_minmax(0,420px)] md:items-start md:gap-10"
+                initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5, delay: i * 0.04 }}
+                transition={{ duration: 0.8, delay: i * 0.09, ease: [0.22, 1, 0.36, 1] }}
               >
-                <span className="font-display text-3xl font-light leading-none text-gray-400 sm:text-4xl">
+                <span className="font-display text-3xl font-light leading-none text-ink/40 sm:text-4xl">
                   {f.n}
                 </span>
-                <h3 className="font-display text-xl font-medium leading-tight text-gray-900 sm:text-2xl">
+                <h3 className="font-display text-[1.375rem] font-medium leading-snug text-ink sm:text-2xl">
                   {f.title}
                 </h3>
-                <p className="text-base leading-relaxed text-gray-700">{f.body}</p>
+                <p className="text-[1.0625rem] leading-[1.7] text-ink/70">{f.body}</p>
               </motion.div>
             ))}
           </div>
@@ -218,35 +243,35 @@ export default function Home() {
       </section>
 
       {/* INTERNATIONAL */}
-      <section className="bg-white py-20 sm:py-24">
+      <section className="bg-white py-24 sm:py-32 lg:py-36">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 md:grid-cols-2 md:items-center lg:px-8">
-          <div>
-            <h2 className="font-display text-3xl font-light leading-tight text-gray-900 sm:text-4xl">
+          <motion.div {...settle}>
+            <h2 className="font-display text-[clamp(2rem,3.5vw,3.25rem)] font-light leading-[1.08] tracking-[-0.015em] text-ink">
               Studying in Australia? We can help.
             </h2>
-            <p className="mt-6 text-base leading-relaxed text-gray-700">
+            <p className="mt-6 max-w-[62ch] text-[1.0625rem] leading-[1.7] text-ink/70">
               We support applicants from across Asia and the Pacific. Our International
               Student Office can guide you through CRICOS, visa, English-language
               requirements (typically IELTS 5.5 or equivalent), and pre-arrival
               logistics in Adelaide.
             </p>
-            <p className="mt-3 text-sm text-gray-500">
+            <p className="mt-3 text-sm text-ink/50">
               CRICOS provider code coming soon — registration in progress.
             </p>
             <div className="mt-8">
               <a
                 href="mailto:international@holainternationalcollege.com.au?subject=International%20student%20enquiry"
-                className="inline-flex items-center gap-2 rounded-md bg-forest-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-forest-700"
+                className="inline-flex items-center gap-2 rounded-sm bg-forest-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-forest-700"
               >
                 Email the International Office
                 <ArrowRight size={16} />
               </a>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="rounded-lg bg-gray-50 p-8 sm:p-10">
-            <h3 className="font-display text-xl font-medium text-gray-900">What you'll need</h3>
-            <ul className="mt-6 space-y-4 text-sm text-gray-700">
+          <motion.div {...settle} className="border-l-2 border-forest-600 bg-paper p-8 sm:p-10">
+            <h3 className="font-display text-[1.375rem] font-medium text-ink">What you'll need</h3>
+            <ul className="mt-6 space-y-4 text-sm text-ink/70">
               {[
                 "Year 12 or equivalent secondary qualification",
                 "English proficiency: IELTS 5.5 (or equivalent PTE / TOEFL)",
@@ -256,48 +281,57 @@ export default function Home() {
               ].map((req, i) => (
                 <li
                   key={req}
-                  className="flex gap-3 border-b border-gray-200 pb-4 last:border-0 last:pb-0"
+                  className="flex gap-3 border-b border-ink/10 pb-4 last:border-0 last:pb-0"
                 >
-                  <span className="font-medium text-gray-400">0{i + 1}</span>
+                  <span className="font-medium text-ink/40">0{i + 1}</span>
                   <span className="flex-1">{req}</span>
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* FINAL CTA */}
-      <section className="bg-forest-900 py-20 text-white sm:py-24">
-        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="font-display text-4xl font-light leading-tight sm:text-5xl">
-            Ready to start?
-          </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-forest-100">
-            Apply for the next intake, or talk to us first if you're not sure which
-            course fits. Either way, you'll hear back within two business days.
-          </p>
-          <div className="mt-10 flex flex-wrap justify-center gap-3">
-            <Link
-              to="/signup"
-              className="inline-flex items-center gap-2 rounded-md bg-white px-6 py-3 font-semibold text-forest-700 transition hover:bg-forest-50"
-            >
-              Apply Now
-              <ArrowRight size={18} />
-            </Link>
-            <a
-              href="tel:+61466331055"
-              className="inline-flex items-center gap-2 rounded-md border border-white/40 px-6 py-3 font-semibold text-white transition hover:bg-white/10"
-            >
-              <Phone size={18} /> +61 466 331 055
-            </a>
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 rounded-md border border-white/40 px-6 py-3 font-semibold text-white transition hover:bg-white/10"
-            >
-              Email us
-            </Link>
-          </div>
+      {/* FINAL CTA - left-biased against a contact column */}
+      <section className="bg-forest-900 py-24 text-white sm:py-32">
+        <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,22rem)] lg:items-end lg:gap-20 lg:px-8">
+          <motion.div {...settle}>
+            <h2 className="max-w-2xl font-display text-[clamp(2rem,3.5vw,3.25rem)] font-light leading-[1.08] tracking-[-0.015em]">
+              Ready to start?
+            </h2>
+            <p className="mt-6 max-w-xl text-xl leading-[1.6] text-white/80">
+              Apply for the next intake, or talk to us first if you're not sure which
+              course fits. Either way, you'll hear back within two business days.
+            </p>
+            <div className="mt-10">
+              <Link
+                to="/signup"
+                className="inline-flex items-center gap-2 rounded-sm bg-white px-7 py-3.5 font-semibold text-forest-700 transition-colors duration-300 hover:bg-paper"
+              >
+                Apply Now
+                <ArrowRight size={18} />
+              </Link>
+            </div>
+          </motion.div>
+
+          <motion.div {...settle} className="text-sm">
+            <div className="border-t border-white/15 py-4">
+              <p className="text-white/60">Call us</p>
+              <a
+                href="tel:+61466331055"
+                className="mt-1 inline-flex items-center gap-2 font-medium text-white"
+              >
+                <Phone size={15} /> +61 466 331 055
+              </a>
+            </div>
+            <div className="border-t border-white/15 py-4">
+              <p className="text-white/60">Email us</p>
+              <Link to="/contact" className="mt-1 inline-block font-medium text-white">
+                info@holainternationalcollege.com.au
+              </Link>
+            </div>
+            <div className="border-t border-white/15" />
+          </motion.div>
         </div>
       </section>
     </>

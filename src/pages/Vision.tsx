@@ -50,7 +50,7 @@ export default function Vision() {
   return (
     <>
       {/* HERO */}
-      <section className="bg-gradient-to-br from-forest-700 to-forest-900 py-20 text-white sm:py-24">
+      <section className="bg-forest-700 py-20 text-white sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="font-display text-4xl font-light leading-tight tracking-tight sm:text-5xl lg:text-6xl">
             Our vision. Our mission.
@@ -68,7 +68,7 @@ export default function Vision() {
           <p className="mb-4 text-sm font-semibold uppercase tracking-wider text-forest-700">
             Our vision
           </p>
-          <p className="font-display text-2xl font-light leading-snug text-gray-900 sm:text-3xl">
+          <p className="font-display text-2xl font-light leading-snug text-ink sm:text-3xl">
             To be the leading RTO recognised for excellence in health, aged care and
             community services education — empowering a new generation of compassionate,
             confident professionals who transform lives in their communities.
@@ -77,12 +77,12 @@ export default function Vision() {
       </section>
 
       {/* MISSION */}
-      <section className="bg-gray-50 py-20 sm:py-24">
+      <section className="bg-paper py-20 sm:py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <p className="mb-4 text-sm font-semibold uppercase tracking-wider text-forest-700">
             Our mission
           </p>
-          <p className="font-display text-2xl font-light leading-snug text-gray-900 sm:text-3xl">
+          <p className="font-display text-2xl font-light leading-snug text-ink sm:text-3xl">
             To deliver exceptional, person-centred training programs that combine
             practical skill, ethical practice and genuine care — preparing every
             student with the qualifications, confidence and pathways to build a
@@ -94,11 +94,11 @@ export default function Vision() {
       {/* MANIFESTO */}
       <section className="bg-white py-20 sm:py-24">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <h2 className="font-display text-3xl font-light leading-tight text-gray-900 sm:text-4xl">
+          <h2 className="font-display text-3xl font-light leading-tight text-ink sm:text-4xl">
             Care work is the most important work most people will ever do.
           </h2>
 
-          <div className="mt-8 space-y-6 text-base leading-relaxed text-gray-700 sm:text-lg">
+          <div className="mt-8 space-y-6 text-base leading-relaxed text-ink/70 sm:text-lg">
             <p>
               Australia is ageing. Disability services are scaling. Community-services
               demand grows every year, and the people doing that work are the
@@ -121,9 +121,9 @@ export default function Vision() {
       </section>
 
       {/* VALUES */}
-      <section className="bg-gray-50 py-20 sm:py-24">
+      <section className="bg-paper py-20 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-12 font-display text-3xl font-light leading-tight text-gray-900 sm:text-4xl">
+          <h2 className="mb-12 font-display text-3xl font-light leading-tight text-ink sm:text-4xl">
             Our values
           </h2>
 
@@ -131,22 +131,22 @@ export default function Vision() {
             {values.map((v, i) => (
               <motion.div
                 key={v.n}
-                className="grid grid-cols-1 gap-6 border-t border-gray-200 pt-8 md:grid-cols-[80px_64px_1fr_minmax(0,420px)] md:items-start md:gap-10"
+                className="grid grid-cols-1 gap-6 border-t border-ink/10 pt-8 md:grid-cols-[80px_64px_1fr_minmax(0,420px)] md:items-start md:gap-10"
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.5, delay: i * 0.04 }}
               >
-                <span className="font-display text-3xl font-light leading-none text-gray-400 sm:text-4xl">
+                <span className="font-display text-3xl font-light leading-none text-ink/40 sm:text-4xl">
                   {v.n}
                 </span>
                 <div className="text-forest-700">
                   <v.icon size={32} strokeWidth={1.25} />
                 </div>
-                <h3 className="font-display text-xl font-medium leading-tight text-gray-900 sm:text-2xl">
+                <h3 className="font-display text-xl font-medium leading-tight text-ink sm:text-2xl">
                   {v.title}
                 </h3>
-                <p className="text-base leading-relaxed text-gray-700">{v.body}</p>
+                <p className="text-base leading-relaxed text-ink/70">{v.body}</p>
               </motion.div>
             ))}
           </div>

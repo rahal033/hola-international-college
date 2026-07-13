@@ -78,7 +78,7 @@ export default function SignUp() {
 
   return (
     <>
-      <section className="bg-gradient-to-br from-forest-700 to-forest-900 py-20 text-white sm:py-24">
+      <section className="bg-forest-700 py-20 text-white sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="font-display text-4xl font-light leading-tight tracking-tight sm:text-5xl lg:text-6xl">
             Apply now
@@ -90,11 +90,11 @@ export default function SignUp() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-16 sm:py-20">
+      <section className="bg-paper py-16 sm:py-20">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <form
             onSubmit={handleSubmit}
-            className="space-y-8 rounded-xl bg-white p-6 shadow-sm sm:p-10"
+            className="space-y-8 rounded-sm bg-white p-6 shadow-sm sm:p-10"
           >
             <Section title="Personal Information">
               <div className="grid gap-5 sm:grid-cols-2">
@@ -182,13 +182,13 @@ export default function SignUp() {
               </div>
             </Section>
 
-            <label className="flex items-start gap-3 text-sm text-gray-700">
+            <label className="flex items-start gap-3 text-sm text-ink/70">
               <input
                 type="checkbox"
                 required
                 name="agreeTerms"
                 value="yes"
-                className="mt-0.5 h-4 w-4 rounded border-gray-300 text-forest-600 focus:ring-forest-500"
+                className="mt-0.5 h-4 w-4 rounded border-ink/20 text-forest-600 focus:ring-forest-500"
               />
               <span>
                 I have read and agree to the Hola International College{" "}
@@ -214,7 +214,7 @@ export default function SignUp() {
             {status === "ok" && (
               <div
                 role="status"
-                className="rounded-lg border border-green-200 bg-green-50 p-4 text-sm text-green-900"
+                className="rounded-sm border border-green-200 bg-green-50 p-4 text-sm text-green-900"
               >
                 <strong className="font-semibold">Application received.</strong> Our admissions
                 team will be in touch within 2 business days. If it's urgent, call{" "}
@@ -225,7 +225,7 @@ export default function SignUp() {
             {status === "error" && (
               <div
                 role="alert"
-                className="rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-900"
+                className="rounded-sm border border-red-200 bg-red-50 p-4 text-sm text-red-900"
               >
                 <strong className="font-semibold">Couldn't submit your application.</strong>{" "}
                 {errorMsg} Please email{" "}
@@ -239,12 +239,12 @@ export default function SignUp() {
             <button
               type="submit"
               disabled={submitting}
-              className="w-full rounded-lg bg-forest-600 px-6 py-3 font-semibold text-white shadow-sm transition hover:bg-forest-700 hover:shadow-md disabled:opacity-60"
+              className="w-full rounded-sm bg-forest-600 px-6 py-3 font-semibold text-white shadow-sm transition hover:bg-forest-700 hover:shadow-md disabled:opacity-60"
             >
               {submitting ? "Submitting…" : "Submit Application"}
             </button>
 
-            <p className="text-center text-sm text-gray-600">
+            <p className="text-center text-sm text-ink/55">
               Already have an account?{" "}
               <Link to="/login" className="font-semibold text-forest-600 hover:text-forest-800">
                 Sign in
@@ -258,12 +258,12 @@ export default function SignUp() {
 }
 
 const inputClass =
-  "w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 shadow-sm transition focus:border-forest-500 focus:outline-none focus:ring-2 focus:ring-forest-500";
+  "w-full rounded-sm border border-ink/20 bg-white px-4 py-2.5 text-sm text-ink shadow-sm transition focus:border-forest-500 focus:outline-none focus:ring-2 focus:ring-forest-500";
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div>
-      <h2 className="mb-5 border-b border-gray-200 pb-2 text-lg font-semibold text-forest-800">
+      <h2 className="mb-5 border-b border-ink/10 pb-2 text-lg font-semibold text-forest-800">
         {title}
       </h2>
       {children}
@@ -282,7 +282,7 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="mb-1.5 block text-sm font-medium text-gray-700">
+      <span className="mb-1.5 block text-sm font-medium text-ink/70">
         {label}
         {required && <span className="ml-0.5 text-red-500">*</span>}
       </span>

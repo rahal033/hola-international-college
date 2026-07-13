@@ -55,3 +55,11 @@ html.lenis body {
   font-variation-settings: "opsz" 96, "SOFT" 20;
   letter-spacing: -0.01em;
 }
+
+/* Hero-only display cut - full optical size, zero softness. Sharper
+   at very large sizes than the general .font-display tuning. */
+.font-display-xl {
+  font-family: "Fraunces", ui-serif, Georgia, Cambria, "Times New Roman", serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "opsz" 144, "SOFT" 0;
+}

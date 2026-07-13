@@ -65,7 +65,7 @@ export default function Contact() {
 
   return (
     <>
-      <section className="bg-gradient-to-br from-forest-700 to-forest-900 py-20 text-white sm:py-24">
+      <section className="bg-forest-700 py-20 text-white sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="font-display text-4xl font-light leading-tight tracking-tight sm:text-5xl lg:text-6xl">
             Contact us
@@ -77,11 +77,11 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-16 sm:py-20">
+      <section className="bg-paper py-16 sm:py-20">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-5 lg:px-8">
           <div className="lg:col-span-3">
-            <div className="rounded-xl bg-white p-6 shadow-sm sm:p-8">
-              <h2 className="mb-6 text-2xl font-bold text-gray-900">Send us a message</h2>
+            <div className="rounded-sm bg-white p-6 shadow-sm sm:p-8">
+              <h2 className="mb-6 text-2xl font-bold text-ink">Send us a message</h2>
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid gap-5 sm:grid-cols-2">
                   <Field label="Full Name" required>
@@ -136,7 +136,7 @@ export default function Contact() {
                 {status === "ok" && (
                   <div
                     role="status"
-                    className="rounded-lg border border-green-200 bg-green-50 p-4 text-sm text-green-900"
+                    className="rounded-sm border border-green-200 bg-green-50 p-4 text-sm text-green-900"
                   >
                     <strong className="font-semibold">Message sent.</strong> We'll be in touch
                     within one business day. If it's urgent, call{" "}
@@ -147,7 +147,7 @@ export default function Contact() {
                 {status === "error" && (
                   <div
                     role="alert"
-                    className="rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-900"
+                    className="rounded-sm border border-red-200 bg-red-50 p-4 text-sm text-red-900"
                   >
                     <strong className="font-semibold">Couldn't send.</strong> {errorMsg}{" "}
                     Please email{" "}
@@ -161,7 +161,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="inline-flex items-center justify-center rounded-lg bg-forest-600 px-6 py-3 font-semibold text-white shadow-sm transition hover:bg-forest-700 hover:shadow-md disabled:opacity-60"
+                  className="inline-flex items-center justify-center rounded-sm bg-forest-600 px-6 py-3 font-semibold text-white shadow-sm transition hover:bg-forest-700 hover:shadow-md disabled:opacity-60"
                 >
                   {submitting ? "Sending…" : "Send Message"}
                 </button>
@@ -185,8 +185,8 @@ export default function Contact() {
               <p>Monday – Friday: 9:00 AM – 5:00 PM<br />Closed weekends and public holidays</p>
             </InfoCard>
 
-            <div className="rounded-xl border border-forest-200 bg-forest-50 p-6 shadow-sm">
-              <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-forest-600 text-white">
+            <div className="rounded-sm border border-forest-200 bg-forest-50 p-6 shadow-sm">
+              <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-sm bg-forest-600 text-white">
                 <Globe size={20} />
               </div>
               <h3 className="text-lg font-semibold text-forest-900">International Students</h3>
@@ -209,7 +209,7 @@ export default function Contact() {
 }
 
 const inputClass =
-  "w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 shadow-sm transition focus:border-forest-500 focus:outline-none focus:ring-2 focus:ring-forest-500";
+  "w-full rounded-sm border border-ink/20 bg-white px-4 py-2.5 text-sm text-ink shadow-sm transition focus:border-forest-500 focus:outline-none focus:ring-2 focus:ring-forest-500";
 
 function Field({
   label,
@@ -222,7 +222,7 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="mb-1.5 block text-sm font-medium text-gray-700">
+      <span className="mb-1.5 block text-sm font-medium text-ink/70">
         {label}
         {required && <span className="ml-0.5 text-red-500">*</span>}
       </span>
@@ -241,14 +241,14 @@ function InfoCard({
   children: React.ReactNode;
 }) {
   return (
-    <div className="rounded-xl bg-white p-6 shadow-sm">
+    <div className="rounded-sm bg-white p-6 shadow-sm">
       <div className="flex gap-4">
-        <div className="inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-forest-100 text-forest-700">
+        <div className="inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-sm bg-forest-100 text-forest-700">
           <Icon size={20} />
         </div>
         <div>
-          <h3 className="text-base font-semibold text-gray-900">{title}</h3>
-          <div className="mt-1 text-sm text-gray-600">{children}</div>
+          <h3 className="text-base font-semibold text-ink">{title}</h3>
+          <div className="mt-1 text-sm text-ink/55">{children}</div>
         </div>
       </div>
     </div>

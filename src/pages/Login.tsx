@@ -10,20 +10,20 @@ export default function Login() {
   );
 
   return (
-    <section className="bg-gray-50 px-4 py-16 sm:py-20">
+    <section className="bg-paper px-4 py-16 sm:py-20">
       <div className="mx-auto w-full max-w-2xl">
-        <div className="rounded-2xl bg-white p-8 shadow-lg sm:p-10">
+        <div className="rounded-sm bg-white p-8 shadow-lg sm:p-10">
           <div className="flex flex-col items-center text-center">
             <Logo size={56} />
-            <h1 className="mt-4 text-3xl font-bold text-gray-900">Student & Trainer Portal</h1>
-            <p className="mt-2 max-w-md text-sm text-gray-600">
+            <h1 className="mt-4 text-3xl font-bold text-ink">Student & Trainer Portal</h1>
+            <p className="mt-2 max-w-md text-sm text-ink/55">
               The Hola International College Learning Portal will go live alongside our
               first intake. Enrolled students and trainers will receive their login details
               by email.
             </p>
           </div>
 
-          <div className="mt-8 rounded-2xl border border-forest-100 bg-forest-50 p-6 text-center">
+          <div className="mt-8 rounded-sm border border-forest-100 bg-forest-50 p-6 text-center">
             <div className="mx-auto mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-forest-600 text-white">
               <Clock size={18} />
             </div>
@@ -35,7 +35,7 @@ export default function Login() {
             </p>
           </div>
 
-          <p className="mt-8 border-t border-gray-100 pt-6 text-center text-sm text-gray-600">
+          <p className="mt-8 border-t border-ink/10 pt-6 text-center text-sm text-ink/55">
             New to Hola International College?{" "}
             <Link to="/signup" className="font-semibold text-forest-600 hover:text-forest-800">
               Apply for a course
@@ -61,7 +61,7 @@ export default function Login() {
           />
         </div>
 
-        <div className="mt-6 rounded-xl border border-amber-200 bg-amber-50 p-5 text-sm text-amber-900">
+        <div className="mt-6 rounded-sm border border-amber-200 bg-amber-50 p-5 text-sm text-amber-900">
           <p>
             <strong>Need help right now?</strong> Email{" "}
             <a href="mailto:info@holainternationalcollege.com.au" className="font-semibold underline">
@@ -85,12 +85,12 @@ function FeatureCard({
   body: string;
 }) {
   return (
-    <div className="rounded-xl bg-white p-5 shadow-sm">
-      <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-forest-100 text-forest-700">
+    <div className="rounded-sm bg-white p-5 shadow-sm">
+      <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-sm bg-forest-100 text-forest-700">
         <Icon size={20} />
       </div>
-      <h3 className="text-sm font-semibold text-gray-900">{title}</h3>
-      <p className="mt-1 text-xs leading-relaxed text-gray-600">{body}</p>
+      <h3 className="text-sm font-semibold text-ink">{title}</h3>
+      <p className="mt-1 text-xs leading-relaxed text-ink/55">{body}</p>
     </div>
   );
 }

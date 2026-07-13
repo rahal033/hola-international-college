@@ -28,7 +28,7 @@ export default function Layout() {
               <span className="text-base font-semibold text-forest-600 sm:text-lg">
                 Hola International College
               </span>
-              <span className="hidden text-[11px] font-medium uppercase tracking-[0.18em] text-forest-400 sm:block">
+              <span className="hidden text-xs text-forest-400 sm:block">
                 Registered Training Organisation
               </span>
             </span>
@@ -41,7 +41,7 @@ export default function Layout() {
                 to={item.to}
                 end={item.end}
                 className={({ isActive }) =>
-                  `rounded-md px-3 py-2 text-sm font-medium transition ${
+                  `rounded-sm px-3 py-2 text-sm font-medium transition ${
                     isActive
                       ? "text-forest-600"
                       : "text-gray-700 hover:text-forest-600"
@@ -56,13 +56,13 @@ export default function Layout() {
           <div className="hidden items-center gap-3 lg:flex">
             <Link
               to="/login"
-              className="rounded-md px-4 py-2 text-sm font-medium text-forest-600 hover:text-forest-800"
+              className="rounded-sm px-4 py-2 text-sm font-medium text-forest-600 hover:text-forest-800"
             >
               Login
             </Link>
             <Link
               to="/signup"
-              className="rounded-md bg-forest-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-forest-700 hover:shadow-md"
+              className="rounded-sm bg-forest-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-forest-700 hover:shadow-md"
             >
               Apply Now
             </Link>
@@ -71,7 +71,7 @@ export default function Layout() {
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-md text-gray-700 hover:bg-gray-100 lg:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-sm text-ink/70 hover:bg-paper lg:hidden"
             aria-label="Toggle menu"
           >
             {open ? <X size={22} /> : <Menu size={22} />}
@@ -88,10 +88,10 @@ export default function Layout() {
                   end={item.end}
                   onClick={() => setOpen(false)}
                   className={({ isActive }) =>
-                    `rounded-md px-3 py-2 text-base font-medium ${
+                    `rounded-sm px-3 py-2 text-base font-medium ${
                       isActive
                         ? "bg-forest-50 text-forest-600"
-                        : "text-gray-700 hover:bg-gray-100"
+                        : "text-ink/70 hover:bg-paper"
                     }`
                   }
                 >
@@ -102,14 +102,14 @@ export default function Layout() {
                 <Link
                   to="/login"
                   onClick={() => setOpen(false)}
-                  className="flex-1 rounded-md border border-forest-600 px-4 py-2 text-center text-sm font-medium text-forest-600"
+                  className="flex-1 rounded-sm border border-forest-600 px-4 py-2 text-center text-sm font-medium text-forest-600"
                 >
                   Login
                 </Link>
                 <Link
                   to="/signup"
                   onClick={() => setOpen(false)}
-                  className="flex-1 rounded-md bg-forest-600 px-4 py-2 text-center text-sm font-semibold text-white"
+                  className="flex-1 rounded-sm bg-forest-600 px-4 py-2 text-center text-sm font-semibold text-white"
                 >
                   Apply Now
                 </Link>
@@ -150,7 +150,7 @@ export default function Layout() {
               qualifications in health, aged care, disability and community services.
             </p>
             <div className="mt-5">
-              <div className="mb-2 text-[11px] font-medium uppercase tracking-[0.18em] text-forest-100/60">
+              <div className="mb-2 text-xs text-forest-100/60">
                 Social - coming soon
               </div>
               <div className="flex gap-2.5 text-sm font-bold opacity-50" aria-label="Social media accounts coming soon">
@@ -168,7 +168,7 @@ export default function Layout() {
           </div>
 
           <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
+            <h4 className="mb-4 text-sm font-semibold text-white">
               Quick Links
             </h4>
             <ul className="space-y-2 text-sm">
@@ -180,7 +180,7 @@ export default function Layout() {
           </div>
 
           <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
+            <h4 className="mb-4 text-sm font-semibold text-white">
               Support
             </h4>
             <ul className="space-y-2 text-sm">
@@ -193,7 +193,7 @@ export default function Layout() {
           </div>
 
           <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
+            <h4 className="mb-4 text-sm font-semibold text-white">
               Contact
             </h4>
             <ul className="space-y-3 text-sm">

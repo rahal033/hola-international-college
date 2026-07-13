@@ -19,7 +19,7 @@ export default function PrivacyPolicy() {
 
   return (
     <>
-      <section className="bg-gradient-to-br from-forest-700 to-forest-900 py-20 text-white sm:py-24">
+      <section className="bg-forest-700 py-20 text-white sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="font-display text-4xl font-light leading-tight tracking-tight sm:text-5xl lg:text-6xl">
             Privacy policy
@@ -32,7 +32,7 @@ export default function PrivacyPolicy() {
       </section>
 
       <section className="bg-paper py-12 sm:py-16">
-        <article className="mx-auto max-w-3xl space-y-8 px-4 text-base leading-relaxed text-gray-800 sm:px-6 lg:px-8">
+        <article className="mx-auto max-w-3xl space-y-8 px-4 text-base leading-relaxed text-ink/80 sm:px-6 lg:px-8">
           <Block title="1. Who we are">
             <p>
               <strong>Hola International College Pty Ltd</strong> (ABN pending; trading as
@@ -228,7 +228,7 @@ export default function PrivacyPolicy() {
             </address>
           </Block>
 
-          <p className="border-t border-gray-200 pt-6 text-sm text-gray-500">
+          <p className="border-t border-ink/10 pt-6 text-sm text-ink/50">
             This policy is provided for transparency under the Australian Privacy
             Principles. It does not constitute legal advice. Hola International College
             recommends you seek independent legal advice if you have specific privacy
